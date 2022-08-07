@@ -1,0 +1,201 @@
+import { Fragment, useEffect, useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import {
+  Text,
+  Spacer,
+  Table,
+  Card,
+  Input,
+  Loading,
+  Modal,
+  Button,
+} from '@nextui-org/react';
+import classes from './DetailCourse.module.css';
+import { RiEyeLine } from 'react-icons/ri';
+
+function toLowerCaseNonAccentVietnamese(str) {
+  str = str.toLowerCase();
+  str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, 'a');
+  str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, 'e');
+  str = str.replace(/ì|í|ị|ỉ|ĩ/g, 'i');
+  str = str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, 'o');
+  str = str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, 'u');
+  str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, 'y');
+  str = str.replace(/đ/g, 'd');
+  str = str.replace(/\u0300|\u0301|\u0303|\u0309|\u0323/g, '');
+  str = str.replace(/\u02C6|\u0306|\u031B/g, '');
+  return str;
+}
+
+const DetailCourse = () => {
+  const [infoCourse, setInfoCourse] = useState(undefined);
+  const [course, setCourse] = useState(undefined);
+  const [courseSearch, setCourseSearch] = useState(undefined);
+  const [search, setSearch] = useState('');
+  const [searching, setSearching] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [selectQuestion, setSelectQuestion] = useState(undefined);
+  const [statusDelete, setStatusDelete] = useState(1);
+
+  const { id } = useParams();
+  const navigate = useNavigate();
+
+  const handleSearchChange = (e) => {
+    setSearch(e.target.value);
+    setSearching(true);
+  };
+
+  useEffect(() => {
+    const course = localStorage.getItem(id);
+
+    setInfoCourse(JSON.parse(course));
+    setCourse(JSON.parse(course).data);
+    setCourseSearch(JSON.parse(course).data);
+
+    console.log(JSON.parse(course));
+  }, []);
+
+  useEffect(() => {
+    const time = setTimeout(() => {
+      if (search !== undefined) {
+        const find = course.filter((item) => {
+          const name = toLowerCaseNonAccentVietnamese(item.question.trim());
+          const searcha = toLowerCaseNonAccentVietnamese(search.trim());
+          return name.includes(searcha);
+        });
+        console.log(course);
+        setCourseSearch([...find]);
+      }
+      setSearching(false);
+      console.log('searching');
+    }, 300);
+
+    return () => clearTimeout(time);
+  }, [search]);
+
+  const handleCloseModal = () => {
+    setSelectQuestion(undefined);
+    setShowModal(false);
+  };
+
+  const handleDelete = () => {
+    if (statusDelete === 1) {
+      setStatusDelete(2);
+      return
+    }
+
+    if (statusDelete === 2) {
+      // delete course from localStorage
+      localStorage.removeItem(id);
+      navigate('/');
+    }
+  }
+
+  return (
+    <div>
+      <Modal
+        closeButton
+        blur
+        aria-labelledby="modal-title"
+        open={showModal}
+        onClose={handleCloseModal}
+        width={'40%'}
+      >
+        <Modal.Body>
+          <Text css={{ whiteSpace: 'pre-line' }}>
+            {selectQuestion && selectQuestion.question}
+          </Text>
+          <Spacer />
+          {selectQuestion && console.log(selectQuestion.question)}
+          <Text>
+            <strong>Answer: {selectQuestion && selectQuestion.answer}</strong>
+          </Text>
+        </Modal.Body>
+      </Modal>
+      <div className={classes.header}>
+        <Text h1>Detail course</Text>
+        <div className={classes.buttonHeader}>
+          <Button auto flat={statusDelete === 1} color={'error'} onPress={handleDelete}>
+            Delete
+          </Button>
+          <Button color={'success'}>
+            Learn
+          </Button>
+        </div>
+      </div>
+      {infoCourse !== undefined && courseSearch !== undefined && (
+        <Fragment>
+          <Spacer />
+          <Text>
+            Name: <strong>{infoCourse.name}</strong>
+          </Text>
+          <Text>
+            Create at:{' '}
+            <strong>{new Date(infoCourse.createdAt).toLocaleString()}</strong>
+          </Text>
+          <Spacer y={2} />
+          <div className={classes.search}>
+            <Input
+              width={500}
+              labelLeft={'Search'}
+              onChange={handleSearchChange}
+              clearable
+            />
+          </div>
+          <Spacer y={0.5} />
+          <Card css={{ minHeight: 400 }}>
+            {searching && <Loading />}
+            {!searching && (
+              <Table css={{ minHeight: 400 }}>
+                <Table.Header>
+                  <Table.Column width={100}>ID</Table.Column>
+                  <Table.Column>Question</Table.Column>
+                  <Table.Column css={{ textAlign: 'center' }} width={80}>
+                    Answer
+                  </Table.Column>
+                  <Table.Column width={20}></Table.Column>
+                </Table.Header>
+                <Table.Body>
+                  {courseSearch.map((item) => (
+                    <Table.Row key={item.i}>
+                      <Table.Cell>{item.i}</Table.Cell>
+                      <Table.Cell>
+                        <span className={classes.questionSpan}>
+                          {item.question}
+                        </span>
+                      </Table.Cell>
+                      <Table.Cell css={{ textAlign: 'center' }}>
+                        {item.answer}
+                      </Table.Cell>
+                      <Table.Cell>
+                        <RiEyeLine
+                          color="0072f5"
+                          className={classes.iconEye}
+                          size={16}
+                          onClick={() => {
+                            setShowModal(true);
+                            setSelectQuestion(item);
+                          }}
+                        />
+                      </Table.Cell>
+                    </Table.Row>
+                  ))}
+                </Table.Body>
+                {courseSearch.length > 0 && (
+                  <Table.Pagination
+                    shadow
+                    noMargin
+                    align="center"
+                    rowsPerPage={10}
+                  />
+                )}
+              </Table>
+            )}
+          </Card>
+        </Fragment>
+      )}
+    </div>
+  );
+};
+
+export default DetailCourse;

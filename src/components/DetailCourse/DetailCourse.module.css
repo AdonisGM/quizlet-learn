@@ -1,0 +1,30 @@
+.questionSpan {
+  display      : block;
+  width        : 700px;
+  overflow     : hidden;
+  white-space  : nowrap;
+  text-overflow: ellipsis;
+}
+
+.search {
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+}
+
+.iconEye {
+  cursor: pointer;
+}
+
+.header {
+  display        : flex;
+  justify-content: space-between;
+  align-items    : center;
+}
+
+.buttonHeader {
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  column-gap     : 20px;
+}
