@@ -1,0 +1,78 @@
+A-----Câu 1:
+
+A. abc
+B. bcd
+C. cde
+D. def
+
+
+B-----Câu 2:
+
+A. abc
+B. bcd
+C. cde
+D. def
+
+
+C-----Câu 3:
+
+A. abc
+B. bcd
+C. cde
+D. def
+
+
+D-----Câu 4:
+
+A. abc
+B. bcd
+C. cde
+D. def
+
+
+A-----Câu 5:
+
+A. abc
+B. bcd
+C. cde
+D. def
+
+
+B-----Câu 6:
+
+A. abc
+B. bcd
+C. cde
+D. def
+
+
+C-----Câu 7:
+
+A. abc
+B. bcd
+C. cde
+D. def
+
+
+D-----Câu 8:
+
+A. abc
+B. bcd
+C. cde
+D. def
+
+
+A-----Câu 9:
+
+A. abc
+B. bcd
+C. cde
+D. def
+
+
+B-----Câu 10:
+
+A. abc
+B. bcd
+C. cde
+D. def

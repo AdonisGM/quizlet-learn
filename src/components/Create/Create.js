@@ -38,8 +38,7 @@ const Create = () => {
           i: nanoid(6),
           answer,
           question,
-          lastAnswerCorrect: true,
-          numberOfAttempts: 0,
+          learned: false,
         };
       });
       // save to local storage
