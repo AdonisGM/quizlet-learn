@@ -2,6 +2,7 @@ import { Fragment, useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import {
   Text,
+  Progress,
   Spacer,
   Table,
   Card,
@@ -12,6 +13,7 @@ import {
 } from '@nextui-org/react';
 import classes from './DetailCourse.module.css';
 import { RiEyeLine } from 'react-icons/ri';
+import { MdKeyboardBackspace } from 'react-icons/md';
 
 function toLowerCaseNonAccentVietnamese(str) {
   str = str.toLowerCase();
@@ -29,8 +31,8 @@ function toLowerCaseNonAccentVietnamese(str) {
 
 const DetailCourse = () => {
   const [infoCourse, setInfoCourse] = useState(undefined);
-  const [course, setCourse] = useState(undefined);
-  const [courseSearch, setCourseSearch] = useState(undefined);
+  const [course, setCourse] = useState([]);
+  const [courseSearch, setCourseSearch] = useState([]);
   const [search, setSearch] = useState('');
   const [searching, setSearching] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -46,24 +48,21 @@ const DetailCourse = () => {
   };
 
   useEffect(() => {
-    const course = localStorage.getItem(id);
+    const course1 = localStorage.getItem(id);
 
-    setInfoCourse(JSON.parse(course));
-    setCourse(JSON.parse(course).data);
-    setCourseSearch(JSON.parse(course).data);
-
-    console.log(JSON.parse(course));
+    setInfoCourse(JSON.parse(course1));
+    setCourse(JSON.parse(course1).data);
+    setCourseSearch(JSON.parse(course1).data);
   }, []);
 
   useEffect(() => {
     const time = setTimeout(() => {
-      if (search !== undefined) {
+      if (search !== undefined && course.length > 0) {
         const find = course.filter((item) => {
           const name = toLowerCaseNonAccentVietnamese(item.question.trim());
           const searcha = toLowerCaseNonAccentVietnamese(search.trim());
           return name.includes(searcha);
         });
-        console.log(course);
         setCourseSearch([...find]);
       }
       setSearching(false);
@@ -81,15 +80,26 @@ const DetailCourse = () => {
   const handleDelete = () => {
     if (statusDelete === 1) {
       setStatusDelete(2);
-      return
+      return;
     }
 
     if (statusDelete === 2) {
-      // delete course from localStorage
       localStorage.removeItem(id);
       navigate('/');
     }
-  }
+  };
+
+  const handleButtonLearnPress = () => {
+    if (course.filter((item) => item.learned === false).length === 0) {
+      course.forEach((item) => {
+        item.learned = false;
+      });
+      const temp1 = JSON.parse(localStorage.getItem(id));
+      temp1.data = course;
+      localStorage.setItem(id, JSON.stringify(temp1));
+    }
+    navigate(`/learn/${id}`);
+  };
 
   return (
     <div>
@@ -113,23 +123,39 @@ const DetailCourse = () => {
         </Modal.Body>
       </Modal>
       <div className={classes.header}>
-        <Text h1>Detail course</Text>
+        <Button
+          auto
+          color={'default'}
+          icon={<MdKeyboardBackspace />}
+          onPress={() => navigate('/')}
+        >
+          List course
+        </Button>
         <div className={classes.buttonHeader}>
-          <Button auto flat={statusDelete === 1} color={'error'} onPress={handleDelete}>
+          <Button
+            size={'xs'}
+            auto
+            flat={statusDelete === 1}
+            color={'error'}
+            onPress={handleDelete}
+          >
             Delete
           </Button>
-          <Button color={'success'}>
-            Learn
+          <Button auto color={'success'} onPress={handleButtonLearnPress}>
+            {course.length > 0 &&
+            course.filter((item) => item.learned === false).length === 0
+              ? 'Reset & learn'
+              : 'Learn'}
           </Button>
         </div>
       </div>
       {infoCourse !== undefined && courseSearch !== undefined && (
         <Fragment>
           <Spacer />
-          <Text>
+          <Text css={{ textAlign: 'center' }}>
             Name: <strong>{infoCourse.name}</strong>
           </Text>
-          <Text>
+          <Text css={{ textAlign: 'center' }}>
             Create at:{' '}
             <strong>{new Date(infoCourse.createdAt).toLocaleString()}</strong>
           </Text>
@@ -143,6 +169,18 @@ const DetailCourse = () => {
             />
           </div>
           <Spacer y={0.5} />
+          <Progress
+            css={{
+              position: 'fixed',
+              top: 0,
+              left: 0,
+            }}
+            size="sm"
+            value={(course.filter((item) => item.learned === true)).length / (course.length === 0 ? 1 : course.length) * 100}
+            shadow
+            color="gradient"
+            status="primary"
+          />
           <Card css={{ minHeight: 400 }}>
             {searching && <Loading />}
             {!searching && (
