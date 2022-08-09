@@ -175,6 +175,7 @@ const DetailCourse = () => {
               top: 0,
               left: 0,
             }}
+            squared 
             size="sm"
             value={(course.filter((item) => item.learned === true)).length / (course.length === 0 ? 1 : course.length) * 100}
             shadow
