@@ -38,11 +38,13 @@ const Create = () => {
     if (name.length > 0 && content.length > 0) {
       const list = content.split(secondExtract);
       const listObject = list.map((item) => {
-        const [answer, question] = item.split(firstExtract);
+        const [first, second] = item.split(firstExtract);
+        const tFirst = first.trim();
+        const tSecond = second.trim();
         return {
           i: nanoid(6),
-          answer: !isReverse ? answer : question,
-          question: !isReverse ? question : answer,
+          answer: tFirst.length < tSecond.length ? tFirst : tSecond,
+          question: tFirst.length < tSecond.length ? tSecond : tFirst,
           learned: false,
         };
       });
@@ -81,7 +83,7 @@ const Create = () => {
           </Grid>
           <Grid xs={3}>
             <div className={classes.iconQuestion}>
-              <Link href="">
+              <Link href="https://github.com/AdonisGM/quizlet-learn/blob/master/Tutorial.md" target={'_blank'}>
                 <BsFillQuestionCircleFill size={30} color="gray" />
               </Link>
             </div>
@@ -108,7 +110,7 @@ const Create = () => {
           <Spacer />
           <Card.Divider />
           <Spacer />
-          <div className={classes.butonSwitch}>
+          {/* <div className={classes.butonSwitch}>
             <Text css={{ margin: 0 }}>Reverse extract:</Text>
             <Switch
               checked={isReverse}
@@ -117,7 +119,7 @@ const Create = () => {
                 setIsReverse(e.target.checked);
               }}
             />
-          </div>
+          </div> */}
           <Grid.Container>
             <Grid xs={3}>
               <Input
