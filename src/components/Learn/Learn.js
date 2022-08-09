@@ -1,4 +1,12 @@
-import { Button, Card, Grid, Spacer, Text } from '@nextui-org/react';
+import {
+  Button,
+  Card,
+  Grid,
+  Modal,
+  Spacer,
+  Text,
+  Progress,
+} from '@nextui-org/react';
 import { Fragment, useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { MdKeyboardBackspace } from 'react-icons/md';
@@ -72,10 +80,13 @@ const Learn = () => {
     JSON.parse(localStorage.getItem(id)).data
   );
   const [listLearning, setListLearning] = useState([]);
+  const [cloneListLearning, setCloneListLearning] = useState([]);
   const [indexSelectQuestion, setIndexSelectQuestion] = useState(0);
   const [listAnswer, setListAnswer] = useState([]);
   const [selectAnswer, setSelectAnswer] = useState(undefined);
   const [isNotCorrect, setIsNotCorrect] = useState(false);
+  const [showResult, setShowResult] = useState(false);
+  const [numberLearning, setNumberLearning] = useState(0);
 
   // get 7 question random from list in first time
   useEffect(() => {
@@ -88,6 +99,7 @@ const Learn = () => {
       navigate('/course/' + id);
     }
     setListLearning(listSeven);
+    setCloneListLearning(listSeven);
     setIndexSelectQuestion(0);
   }, []);
 
@@ -99,6 +111,17 @@ const Learn = () => {
       setListAnswer(generateAnswer(listLearning[indexSelectQuestion].answer));
     }
   }, [indexSelectQuestion, listLearning]);
+
+  useEffect(() => {
+    if (cloneListLearning.length > 0) {
+      const countLearn = cloneListLearning.filter((item) => {
+        return item.count === 2;
+      }).length;
+      const totalL = cloneListLearning.length;
+
+      setNumberLearning((countLearn * 100) / totalL);
+    }
+  }, [selectAnswer]);
 
   // function and handler
   const generateAnswer = (answer) => {
@@ -124,7 +147,7 @@ const Learn = () => {
     const temp = JSON.parse(localStorage.getItem(id));
     temp.data = listAllQuestion;
     localStorage.setItem(id, JSON.stringify(temp));
-    navigate('/course/' + id);
+    setShowResult(true);
   };
 
   const handleCardAnswerPress = (key) => {
@@ -138,15 +161,7 @@ const Learn = () => {
         if (indexSelectQuestion !== listLearning.length - 1) {
           setIndexSelectQuestion(indexSelectQuestion + 1);
         } else {
-          const t = listLearning.filter((item) => {
-            return item.count <= 1;
-          });
-          if (t.length === 0) {
-            updateListLocalStorage();
-          } else {
-            setListLearning(t);
-            setIndexSelectQuestion(0);
-          }
+          repeatListLearning();
         }
       }, 500);
     } else {
@@ -158,26 +173,98 @@ const Learn = () => {
     if (indexSelectQuestion !== listLearning.length - 1) {
       setIndexSelectQuestion(indexSelectQuestion + 1);
     } else {
-      const t = listLearning.filter((item) => {
-        return item.count <= 1;
-      });
-      if (t.length === 0) {
-        updateListLocalStorage();
-      } else {
-        setListLearning(t);
-        setIndexSelectQuestion(0);
-      }
+      repeatListLearning();
     }
   };
 
+  const repeatListLearning = () => {
+    const t = listLearning.filter((item) => {
+      return item.count <= 1;
+    });
+    if (t.length === 0) {
+      updateListLocalStorage();
+    } else {
+      setListLearning(t);
+      setIndexSelectQuestion(0);
+    }
+  };
+
+  const handleCloseModal = () => {
+    setShowResult(false);
+    const listSeven = getSevenFromList(
+      listAllQuestion.filter((item) => {
+        return item.learned === false;
+      })
+    );
+    if (listSeven.length === 0) {
+      navigate('/course/' + id);
+    }
+    setListLearning(listSeven);
+    setCloneListLearning(listSeven);
+    setIndexSelectQuestion(0);
+  };
+
   return (
-    <div>
+    <div className={classes.main}>
+      <Progress
+        css={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+        }}
+        squared="true"
+        size="sm"
+        value={numberLearning}
+        shadow
+        color="gradient"
+        status="primary"
+      />
       <Fragment>
+        <Modal
+          onClose={handleCloseModal}
+          closeButton
+          open={showResult}
+          scroll
+          width="900px"
+        >
+          <Modal.Header>
+            <Text id="modal-title" size={18}>
+              Result your learning
+            </Text>
+          </Modal.Header>
+          <Modal.Body>
+            <Grid.Container gap={2}>
+              {cloneListLearning.length > 0 &&
+                cloneListLearning.map((item, index) => (
+                  <Grid key={index} xs={12}>
+                    <Card variant={'bordered'} borderWeight={'normal'}>
+                      <Card.Body>
+                        <Text size={14} css={{ whiteSpace: 'pre-wrap' }}>
+                          {item.question}
+                        </Text>
+                        <Spacer />
+                        <Text size={14}>
+                          <strong>Answer: {item.answer}</strong>
+                        </Text>
+                      </Card.Body>
+                    </Card>
+                  </Grid>
+                ))}
+            </Grid.Container>
+          </Modal.Body>
+        </Modal>
         <Grid.Container>
           <Grid xs={2}>
-            <Button color={'error'} flat icon={<MdKeyboardBackspace />} auto size={'sm'} onPress={() => {
-              navigate('/course/' + id);
-            }}>
+            <Button
+              color={'error'}
+              flat
+              icon={<MdKeyboardBackspace />}
+              auto
+              size={'sm'}
+              onPress={() => {
+                navigate('/course/' + id);
+              }}
+            >
               Quit learn
             </Button>
           </Grid>

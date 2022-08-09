@@ -16,11 +16,6 @@
   <img width='60%' src='./image-github/image2.png'>
 </div>
 
-- Step 4: Paste text from clipboard to textarea. There are 2 import cases you need to note as follows:
-
-|   | Case 1 | Case 2 |
-| ---- | :----: | :-----------: |
-| Type question  | <img width='80%' src='./image-github/case1.png'> | <img width='80%' src='./image-github/case2.png'> |
-| Reverse extract | <img width='80%' src='./image-github/scase1.png'> | <img width='80%' src='./image-github/scase2.png'> |
+- Step 4: Paste text from clipboard to textarea.
 
 - Step 5: Click "Create" button and enjoy learning.
