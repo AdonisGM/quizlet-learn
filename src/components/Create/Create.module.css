@@ -1,0 +1,19 @@
+.butonSwitch {
+  display    : flex;
+  align-items: center;
+
+  column-gap: 20px;
+
+  margin-bottom: 20px;
+}
+
+.iconQuestion {
+  display        : flex;
+  align-items    : center;
+  justify-content: end;
+  width          : 100%;
+}
+
+.iconQuestion>div {
+  cursor: pointer;
+}
