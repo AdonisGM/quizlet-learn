@@ -7,6 +7,8 @@
     <img alt="GitHub package.json version (subfolder of monorepo)" src="https://img.shields.io/github/package-json/v/AdonisGM/quizlet-learn?color=green&%2Fpackage.json&label=version%20server">
 </div>
 
+[![Azure Static Web Apps CI/CD](https://github.com/AdonisGM/quizlet-learn/actions/workflows/azure-static-web-apps-happy-coast-0ab73bc00.yml/badge.svg?branch=master)](https://github.com/AdonisGM/quizlet-learn/actions/workflows/azure-static-web-apps-happy-coast-0ab73bc00.yml)
+
 Quizlet is a free service that helps you study and improve your vocabulary. but it is not free for everyone. You need to pay for learning. You can use this service for free without paying.
 
 ## Target audience
