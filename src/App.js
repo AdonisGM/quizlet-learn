@@ -5,6 +5,7 @@ import Layout from './components/Layout/Layout';
 import NotFoundScreen from './screens/NotFoundScreen';
 import DetailCourseScreen from './screens/DetailCourseScreen';
 import LearnScreen from './screens/LearnScreen';
+import ExamScreen from './screens/ExamScreen';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path={'/create'} element={<CreateScreen title={'Create course | AdonisGM'}/>} />
         <Route path={'/course/:id'} element={<DetailCourseScreen title={'Detail course | AdonisGM'}/>} />
         <Route path={'/learn/:id'} element={<LearnScreen title={'Detail course | AdonisGM'}/>} />
+        <Route path={'/course/:id/exam'} element={<ExamScreen title={'ExamScreen | AdonisGM'}/>} />
       </Route>
       <Route path={'*'} element={<NotFoundScreen title={'Not found | AdonisGM'}/>} />
     </Routes>
