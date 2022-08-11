@@ -1,7 +1,12 @@
-const ExamScreen = () => {
-  return (
-    <h1>Exam</h1>
-  )
-}
+import { useEffect } from 'react';
+import Exam from '../components/Exam/Exam';
+
+const ExamScreen = ({ title }) => {
+  useEffect(() => {
+    document.title = title;
+  }, [title]);
+
+  return <Exam />;
+};
 
 export default ExamScreen;

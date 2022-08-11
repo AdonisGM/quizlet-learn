@@ -9,11 +9,13 @@ import {
   Input,
   Loading,
   Modal,
+  Dropdown,
   Button,
 } from '@nextui-org/react';
 import classes from './DetailCourse.module.css';
 import { RiEyeLine } from 'react-icons/ri';
 import { MdKeyboardBackspace } from 'react-icons/md';
+import { FcGraduationCap, FcReading, FcFullTrash } from 'react-icons/fc';
 
 function toLowerCaseNonAccentVietnamese(str) {
   str = str.toLowerCase();
@@ -37,7 +39,6 @@ const DetailCourse = () => {
   const [searching, setSearching] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [selectQuestion, setSelectQuestion] = useState(undefined);
-  const [statusDelete, setStatusDelete] = useState(1);
 
   const { id } = useParams();
   const navigate = useNavigate();
@@ -78,15 +79,8 @@ const DetailCourse = () => {
   };
 
   const handleDelete = () => {
-    if (statusDelete === 1) {
-      setStatusDelete(2);
-      return;
-    }
-
-    if (statusDelete === 2) {
-      localStorage.removeItem(id);
-      navigate('/');
-    }
+    localStorage.removeItem(id);
+    navigate('/');
   };
 
   const handleButtonLearnPress = () => {
@@ -132,21 +126,58 @@ const DetailCourse = () => {
           List course
         </Button>
         <div className={classes.buttonHeader}>
-          <Button
-            size={'xs'}
-            auto
-            flat={statusDelete === 1}
-            color={'error'}
-            onPress={handleDelete}
-          >
-            Delete
-          </Button>
-          <Button auto color={'success'} onPress={handleButtonLearnPress}>
-            {course.length > 0 &&
-            course.filter((item) => item.learned === false).length === 0
-              ? 'Reset & learn'
-              : 'Learn'}
-          </Button>
+          <Dropdown disableAnimation>
+            <Dropdown.Button flat color="secondary">
+              Actions
+            </Dropdown.Button>
+            <Dropdown.Menu
+              aria-label="Actions"
+              css={{ $$dropdownMenuWidth: '280px' }}
+              onAction={(e) => {
+                switch (e) {
+                  case 'Learn':
+                    handleButtonLearnPress();
+                    break;
+                  case 'Exam':
+                    navigate('/course/' + id + '/exam');
+                    break;
+                  case 'Delete':
+                    handleDelete();
+                  default:
+                    break;
+                }
+              }}
+            >
+              <Dropdown.Section title={'Actions'}>
+                <Dropdown.Item
+                  key="Learn"
+                  description="Learn course multiple choice"
+                  color="success"
+                  icon={<FcReading size={20} />}
+                >
+                  Learn
+                </Dropdown.Item>
+                <Dropdown.Item
+                  key="Exam"
+                  description="Exam course with layout EOS 🤣"
+                  color="warning"
+                  icon={<FcGraduationCap size={20} />}
+                >
+                  Take exam
+                </Dropdown.Item>
+              </Dropdown.Section>
+              <Dropdown.Section title={'Danger Zone'}>
+                <Dropdown.Item
+                  key="Delete"
+                  description="Delete course, can't be undone"
+                  color="error"
+                  icon={<FcFullTrash size={20} />}
+                >
+                  Delete
+                </Dropdown.Item>
+              </Dropdown.Section>
+            </Dropdown.Menu>
+          </Dropdown>
         </div>
       </div>
       {infoCourse !== undefined && courseSearch !== undefined && (
@@ -177,7 +208,11 @@ const DetailCourse = () => {
             }}
             squared="true"
             size="sm"
-            value={(course.filter((item) => item.learned === true)).length / (course.length === 0 ? 1 : course.length) * 100}
+            value={
+              (course.filter((item) => item.learned === true).length /
+                (course.length === 0 ? 1 : course.length)) *
+              100
+            }
             shadow
             color="gradient"
             status="primary"
