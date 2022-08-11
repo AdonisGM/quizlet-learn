@@ -15,8 +15,8 @@ function App() {
         <Route path={'/create'} element={<CreateScreen title={'Create course | AdonisGM'}/>} />
         <Route path={'/course/:id'} element={<DetailCourseScreen title={'Detail course | AdonisGM'}/>} />
         <Route path={'/learn/:id'} element={<LearnScreen title={'Detail course | AdonisGM'}/>} />
-        <Route path={'/course/:id/exam'} element={<ExamScreen title={'ExamScreen | AdonisGM'}/>} />
       </Route>
+      <Route path={'/course/:id/exam'} element={<ExamScreen title={'ExamScreen | AdonisGM'}/>} />
       <Route path={'*'} element={<NotFoundScreen title={'Not found | AdonisGM'}/>} />
     </Routes>
   );

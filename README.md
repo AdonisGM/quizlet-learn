@@ -20,6 +20,7 @@ This service is for student learn in FPT University.
 - Free all time.
 - Import from quizlet.
 - Export to quizlet.
+- Exam mode.
 
 ## Installation
 
