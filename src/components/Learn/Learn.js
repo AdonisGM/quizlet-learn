@@ -126,7 +126,7 @@ const Learn = () => {
   // function and handler
   const generateAnswer = (answer) => {
     const ran = [...dummyAnswer].sort(() => Math.random() - 0.5);
-    const l = [answer, ...ran];
+    const l = [answer.toUpperCase(), ...ran];
 
     const result = l.filter((item, index) => {
       return l.indexOf(item) === index;
@@ -153,7 +153,7 @@ const Learn = () => {
   const handleCardAnswerPress = (key) => {
     setSelectAnswer(key);
 
-    if (key === listLearning[indexSelectQuestion].answer) {
+    if (key.toUpperCase() === listLearning[indexSelectQuestion].answer.toUpperCase()) {
       listLearning[indexSelectQuestion].count =
         listLearning[indexSelectQuestion].count + 1;
 
@@ -319,15 +319,15 @@ const Learn = () => {
                       css={
                         selectAnswer === undefined
                           ? { cursor: 'pointer' }
-                          : selectAnswer === item &&
-                            selectAnswer ===
-                              listLearning[indexSelectQuestion].answer
+                          : selectAnswer.toUpperCase() === item.toUpperCase() &&
+                            selectAnswer.toUpperCase() ===
+                              listLearning[indexSelectQuestion].answer.toUpperCase()
                           ? styleCardCorrect
-                          : selectAnswer === item &&
-                            selectAnswer !==
-                              listLearning[indexSelectQuestion].answer
+                          : selectAnswer.toUpperCase() === item.toUpperCase() &&
+                            selectAnswer.toUpperCase() !==
+                              listLearning[indexSelectQuestion].answer.toUpperCase()
                           ? styleCardIncorrect
-                          : item == listLearning[indexSelectQuestion].answer
+                          : item.toUpperCase() === listLearning[indexSelectQuestion].answer.toUpperCase()
                           ? styleCardCorrect
                           : { cursor: 'pointer' }
                       }
