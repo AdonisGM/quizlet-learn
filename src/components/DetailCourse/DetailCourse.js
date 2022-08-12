@@ -11,6 +11,7 @@ import {
   Modal,
   Dropdown,
   Button,
+  Tooltip,
 } from '@nextui-org/react';
 import classes from './DetailCourse.module.css';
 import { RiEyeLine } from 'react-icons/ri';
@@ -189,6 +190,10 @@ const DetailCourse = () => {
           <Text css={{ textAlign: 'center' }}>
             Create at:{' '}
             <strong>{new Date(infoCourse.createdAt).toLocaleString()}</strong>
+          </Text>
+          <Text css={{ textAlign: 'center' }}>
+            Number of completed:{' '}
+            <strong>{infoCourse.data.filter(item => item.learned === true).length} / {infoCourse.data.length}</strong>
           </Text>
           <Spacer y={2} />
           <div className={classes.search}>
