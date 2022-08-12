@@ -125,16 +125,35 @@ const Learn = () => {
 
   // function and handler
   const generateAnswer = (answer) => {
-    const ran = [...dummyAnswer].sort(() => Math.random() - 0.5);
-    const l = [answer.toUpperCase(), ...ran];
+    if (answer.trim().length === 1) {
+      const ran = [...dummyAnswer].sort(() => Math.random() - 0.5);
+      const l = [answer.toUpperCase(), ...ran];
 
-    const result = l.filter((item, index) => {
-      return l.indexOf(item) === index;
-    });
+      const result = l.filter((item, index) => {
+        return l.indexOf(item) === index;
+      });
 
-    // shuffle
-    const shuffled = result.slice(0, 4).sort(() => Math.random() - 0.5);
-    return shuffled;
+      // shuffle
+      const shuffled = result.slice(0, 4).sort(() => Math.random() - 0.5);
+      return shuffled;
+    } else {
+      const listAns = listAllQuestion.map((item) =>
+        item.answer.toUpperCase().trim()
+      );
+      const a = listAns
+        .filter((item, index) => {
+          return listAns.indexOf(item) === index;
+        })
+        .sort(() => Math.random() - 0.5);
+
+      const b = [answer.toUpperCase(), ...a];
+      const result = b.filter((item, index) => {
+        return b.indexOf(item) === index;
+      });
+
+      const shuffled = result.slice(0, 4).sort(() => Math.random() - 0.5);
+      return shuffled;
+    }
   };
 
   const updateListLocalStorage = () => {
@@ -153,24 +172,31 @@ const Learn = () => {
   const handleCardAnswerPress = (key) => {
     setSelectAnswer(key);
 
-    if (key.toUpperCase() === listLearning[indexSelectQuestion].answer.toUpperCase()) {
+    if (
+      key.toUpperCase() ===
+      listLearning[indexSelectQuestion].answer.toUpperCase()
+    ) {
       listLearning[indexSelectQuestion].count =
         listLearning[indexSelectQuestion].count + 1;
+      listLearning[indexSelectQuestion].lastIncorrect = undefined;
 
       setTimeout(() => {
         if (indexSelectQuestion !== listLearning.length - 1) {
+          listLearning[indexSelectQuestion].lastIncorrectClone = listLearning[indexSelectQuestion].lastIncorrect;
           setIndexSelectQuestion(indexSelectQuestion + 1);
         } else {
           repeatListLearning();
         }
       }, 500);
     } else {
+      listLearning[indexSelectQuestion].lastIncorrect = true;
       setIsNotCorrect(true);
     }
   };
 
   const handleNextButtonPress = () => {
     if (indexSelectQuestion !== listLearning.length - 1) {
+      listLearning[indexSelectQuestion].lastIncorrectClone = listLearning[indexSelectQuestion].lastIncorrect;
       setIndexSelectQuestion(indexSelectQuestion + 1);
     } else {
       repeatListLearning();
@@ -277,6 +303,23 @@ const Learn = () => {
         <Spacer y={2} />
         <Card>
           <Card.Body>
+            <div className={classes.headerQuestionNumber}>
+              <Text size={20}>
+                <strong>Question {indexSelectQuestion + 1}:</strong>{' '}
+              </Text>
+              {listLearning[indexSelectQuestion] !== undefined && listLearning[indexSelectQuestion].lastIncorrectClone !== undefined && <Text
+                size={20}
+                css={{
+                  backgroundColor: 'rgb(255, 219, 205)',
+                  fontSize: 12,
+                  padding: '2px 10px',
+                  fontWeight: 700,
+                  borderRadius: 50,
+                }}
+              >
+                Let's try again
+              </Text>}
+            </div>
             <Text
               size={20}
               css={{
@@ -321,13 +364,20 @@ const Learn = () => {
                           ? { cursor: 'pointer' }
                           : selectAnswer.toUpperCase() === item.toUpperCase() &&
                             selectAnswer.toUpperCase() ===
-                              listLearning[indexSelectQuestion].answer.toUpperCase()
+                              listLearning[
+                                indexSelectQuestion
+                              ].answer.toUpperCase()
                           ? styleCardCorrect
                           : selectAnswer.toUpperCase() === item.toUpperCase() &&
                             selectAnswer.toUpperCase() !==
-                              listLearning[indexSelectQuestion].answer.toUpperCase()
+                              listLearning[
+                                indexSelectQuestion
+                              ].answer.toUpperCase()
                           ? styleCardIncorrect
-                          : item.toUpperCase() === listLearning[indexSelectQuestion].answer.toUpperCase()
+                          : item.toUpperCase() ===
+                            listLearning[
+                              indexSelectQuestion
+                            ].answer.toUpperCase()
                           ? styleCardCorrect
                           : { cursor: 'pointer' }
                       }

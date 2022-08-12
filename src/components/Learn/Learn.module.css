@@ -32,3 +32,20 @@
   padding        : 8px 20px;
   height         : 60px;
 }
+
+.warning {
+  background-color: rgb(255, 219, 205);
+  font-size       : 12px;
+  padding         : 2px 10px;
+  font-weight     : 700;
+  border-radius   : 50px;
+
+  display: inline-block;
+}
+
+.headerQuestionNumber {
+  display    : flex;
+  align-items: center;
+  padding    : 4px 20px;
+  column-gap : 20px;
+}
