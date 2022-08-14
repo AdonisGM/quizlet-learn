@@ -6,6 +6,8 @@ import NotFoundScreen from './screens/NotFoundScreen';
 import DetailCourseScreen from './screens/DetailCourseScreen';
 import LearnScreen from './screens/LearnScreen';
 import ExamScreen from './screens/ExamScreen';
+import LearnPmgScreen from './screens/LearnPmgScreen';
+import ExamScreenPmg from './screens/ExamPmgScreen';
 
 function App() {
   return (
@@ -14,9 +16,11 @@ function App() {
         <Route path={'/'} element={<HomeScreen title={'Home | AdonisGM'}/>} />
         <Route path={'/create'} element={<CreateScreen title={'Create course | AdonisGM'}/>} />
         <Route path={'/course/:id'} element={<DetailCourseScreen title={'Detail course | AdonisGM'}/>} />
-        <Route path={'/learn/:id'} element={<LearnScreen title={'Detail course | AdonisGM'}/>} />
+        <Route path={'/learn/:id'} element={<LearnScreen title={'Learn course | AdonisGM'}/>} />
+        <Route path={'/learn/pmg/:id'} element={<LearnPmgScreen title={'Learn PMG course | AdonisGM'}/>} />
       </Route>
-      <Route path={'/course/:id/exam'} element={<ExamScreen title={'ExamScreen | AdonisGM'}/>} />
+      <Route path={'/course/:id/exam'} element={<ExamScreen title={'Exam Pmg Screen | AdonisGM'}/>} />
+      <Route path={'/course/pmg/:id/exam'} element={<ExamScreenPmg title={'Exam Pmg Screen | AdonisGM'}/>} />
       <Route path={'*'} element={<NotFoundScreen title={'Not found | AdonisGM'}/>} />
     </Routes>
   );

@@ -85,15 +85,20 @@ const DetailCourse = () => {
   };
 
   const handleButtonLearnPress = () => {
+    const temp1 = JSON.parse(localStorage.getItem(id));
     if (course.filter((item) => item.learned === false).length === 0) {
       course.forEach((item) => {
         item.learned = false;
       });
-      const temp1 = JSON.parse(localStorage.getItem(id));
       temp1.data = course;
       localStorage.setItem(id, JSON.stringify(temp1));
     }
-    navigate(`/learn/${id}`);
+
+    if (temp1.name.includes('pmg')) {
+      navigate(`/learn/pmg/${id}`);
+    } else {
+      navigate(`/learn/${id}`);
+    }    
   };
 
   return (
@@ -140,7 +145,12 @@ const DetailCourse = () => {
                     handleButtonLearnPress();
                     break;
                   case 'Exam':
-                    navigate('/course/' + id + '/exam');
+                    const u = JSON.parse(localStorage.getItem(id));
+                    if (u.name.includes('pmg')) {
+                      navigate('/course/pmg/' + id + '/exam');
+                    } else {
+                      navigate('/course/' + id + '/exam');
+                    }    
                     break;
                   case 'Delete':
                     handleDelete();
