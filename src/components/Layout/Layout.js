@@ -3,6 +3,9 @@ import { Outlet } from 'react-router-dom';
 import { Fragment } from 'react';
 import { Text, Link as LinkNextUI } from '@nextui-org/react';
 
+// get version from package.json
+const packageJson = require('../../../package.json');
+
 const Layout = () => {
   return (
     <Fragment>
@@ -17,8 +20,9 @@ const Layout = () => {
           color={'text'}
         >
           <strong>AdonisGM</strong>
-        </LinkNextUI>, version v1.0.4
+        </LinkNextUI>
       </Text>
+      <Text size={10} css={{ textAlign: 'center'}}>Version v{packageJson.version}</Text>
     </Fragment>
   );
 };

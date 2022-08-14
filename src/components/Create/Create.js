@@ -22,6 +22,7 @@ const Create = () => {
   const [firstExtract, setFirstExtract] = useState('-----');
   const [secondExtract, setSecondExtract] = useState('\n\n\n');
   const [isReverse, setIsReverse] = useState(false);
+  const [isSplit, setIsSplit] = useState(false);
 
   const nameRef = useRef();
   const contentRef = useRef();
@@ -48,16 +49,33 @@ const Create = () => {
           learned: false,
         };
       });
-      // save to local storage
-      localStorage.setItem(
-        nanoid(15),
-        JSON.stringify({
-          name: name,
-          data: listObject,
-          createdAt: new Date(),
-          learnedAt: null,
-        })
-      );
+      if (isSplit && listObject.length > 100) {
+        let a = 0;
+        for (let i = 0; i < listObject.length; i += 100) {
+          const t = listObject.slice(i, i + 100);
+          localStorage.setItem(
+            nanoid(15),
+            JSON.stringify({
+              name: name + ` (Part ${a + 1})`,
+              data: t,
+              createdAt: new Date(),
+              learnedAt: null,
+            })
+          );
+          a++;
+        }
+      } else {
+        // save to local storage
+        localStorage.setItem(
+          nanoid(15),
+          JSON.stringify({
+            name: name,
+            data: listObject,
+            createdAt: new Date(),
+            learnedAt: null,
+          })
+        );
+      }
     }
     navigate('/');
   };
@@ -83,7 +101,10 @@ const Create = () => {
           </Grid>
           <Grid xs={3}>
             <div className={classes.iconQuestion}>
-              <Link href="https://github.com/AdonisGM/quizlet-learn/blob/master/Tutorial.md" target={'_blank'}>
+              <Link
+                href="https://github.com/AdonisGM/quizlet-learn/blob/master/Tutorial.md"
+                target={'_blank'}
+              >
                 <BsFillQuestionCircleFill size={30} color="gray" />
               </Link>
             </div>
@@ -110,16 +131,16 @@ const Create = () => {
           <Spacer />
           <Card.Divider />
           <Spacer />
-          {/* <div className={classes.butonSwitch}>
-            <Text css={{ margin: 0 }}>Reverse extract:</Text>
+          <div className={classes.butonSwitch}>
+            <Text css={{ margin: 0 }}>Divided into 100 per course</Text>
             <Switch
-              checked={isReverse}
+              checked={isSplit}
               shadow
               onChange={(e) => {
-                setIsReverse(e.target.checked);
+                setIsSplit(e.target.checked);
               }}
             />
-          </div> */}
+          </div>
           <Grid.Container>
             <Grid xs={3}>
               <Input
@@ -135,7 +156,9 @@ const Create = () => {
         </Card.Body>
       </Card>
       <Spacer />
-      <Button onPress={handleCreate}>Create</Button>
+      <Button shadow onPress={handleCreate}>
+        Create
+      </Button>
     </div>
   );
 };

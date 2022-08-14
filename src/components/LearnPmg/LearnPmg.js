@@ -129,7 +129,7 @@ const Learn = () => {
 
       setNumberLearning((countLearn * 100) / totalL);
     }
-  }, [selectAnswer]);
+  }, [selectAnswer, indexSelectQuestion, listLearning]);
 
   // function and handler
   const generateAnswer = (answer) => {

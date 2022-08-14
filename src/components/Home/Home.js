@@ -12,7 +12,13 @@ const Home = () => {
     const array = Object.keys(localStorage).map((key) => {
       return { id: key, data: JSON.parse(localStorage.getItem(key)) };
     });
-    setListCourse(array);
+    // sort by name
+    const t = array
+      .sort((a, b) => {
+        return a.data.name.localeCompare(b.data.name);
+      })
+    
+    setListCourse(t);
   }, []);
 
   const handleCreate = () => {
@@ -33,7 +39,11 @@ const Home = () => {
           listCourse.map((item) => (
             <Grid xs={4} key={item.id}>
               <Card css={{ cursor: 'pointer' }}>
-                <Card.Body onClick={() => {navigate(`/course/${item.id}`)}}>
+                <Card.Body
+                  onClick={() => {
+                    navigate(`/course/${item.id}`);
+                  }}
+                >
                   <Text size={10}>
                     Id: <strong>{item.id}</strong>
                   </Text>
