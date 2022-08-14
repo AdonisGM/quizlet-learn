@@ -189,9 +189,9 @@ const Learn = () => {
       listLearning[indexSelectQuestion].lastIncorrect = undefined;
 
       setTimeout(() => {
+        listLearning[indexSelectQuestion].lastIncorrectClone =
+          listLearning[indexSelectQuestion].lastIncorrect;
         if (indexSelectQuestion !== listLearning.length - 1) {
-          listLearning[indexSelectQuestion].lastIncorrectClone =
-            listLearning[indexSelectQuestion].lastIncorrect;
           setIndexSelectQuestion(indexSelectQuestion + 1);
         } else {
           repeatListLearning();
@@ -270,9 +270,9 @@ const Learn = () => {
       listLearning[indexSelectQuestion].lastIncorrect = undefined;
 
       setTimeout(() => {
+        listLearning[indexSelectQuestion].lastIncorrectClone =
+          listLearning[indexSelectQuestion].lastIncorrect;
         if (indexSelectQuestion !== listLearning.length - 1) {
-          listLearning[indexSelectQuestion].lastIncorrectClone =
-            listLearning[indexSelectQuestion].lastIncorrect;
           setIndexSelectQuestion(indexSelectQuestion + 1);
         } else {
           repeatListLearning();

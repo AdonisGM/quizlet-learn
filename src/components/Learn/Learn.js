@@ -181,8 +181,9 @@ const Learn = () => {
       listLearning[indexSelectQuestion].lastIncorrect = undefined;
 
       setTimeout(() => {
+        listLearning[indexSelectQuestion].lastIncorrectClone =
+          listLearning[indexSelectQuestion].lastIncorrect;
         if (indexSelectQuestion !== listLearning.length - 1) {
-          listLearning[indexSelectQuestion].lastIncorrectClone = listLearning[indexSelectQuestion].lastIncorrect;
           setIndexSelectQuestion(indexSelectQuestion + 1);
         } else {
           repeatListLearning();
@@ -195,8 +196,9 @@ const Learn = () => {
   };
 
   const handleNextButtonPress = () => {
+    listLearning[indexSelectQuestion].lastIncorrectClone =
+      listLearning[indexSelectQuestion].lastIncorrect;
     if (indexSelectQuestion !== listLearning.length - 1) {
-      listLearning[indexSelectQuestion].lastIncorrectClone = listLearning[indexSelectQuestion].lastIncorrect;
       setIndexSelectQuestion(indexSelectQuestion + 1);
     } else {
       repeatListLearning();
@@ -307,18 +309,22 @@ const Learn = () => {
               <Text size={20}>
                 <strong>Question {indexSelectQuestion + 1}:</strong>{' '}
               </Text>
-              {listLearning[indexSelectQuestion] !== undefined && listLearning[indexSelectQuestion].lastIncorrectClone !== undefined && <Text
-                size={20}
-                css={{
-                  backgroundColor: 'rgb(255, 219, 205)',
-                  fontSize: 12,
-                  padding: '2px 10px',
-                  fontWeight: 700,
-                  borderRadius: 50,
-                }}
-              >
-                Let's try again
-              </Text>}
+              {listLearning[indexSelectQuestion] !== undefined &&
+                listLearning[indexSelectQuestion].lastIncorrectClone !==
+                  undefined && (
+                  <Text
+                    size={20}
+                    css={{
+                      backgroundColor: 'rgb(255, 219, 205)',
+                      fontSize: 12,
+                      padding: '2px 10px',
+                      fontWeight: 700,
+                      borderRadius: 50,
+                    }}
+                  >
+                    Let's try again
+                  </Text>
+                )}
             </div>
             <Text
               size={20}
