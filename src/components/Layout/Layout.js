@@ -17,7 +17,7 @@ const Layout = () => {
           color={'text'}
         >
           <strong>AdonisGM</strong>
-        </LinkNextUI>
+        </LinkNextUI>, version v1.0.4
       </Text>
     </Fragment>
   );
