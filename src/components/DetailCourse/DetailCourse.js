@@ -12,11 +12,17 @@ import {
   Dropdown,
   Button,
   Tooltip,
+  Textarea,
 } from '@nextui-org/react';
 import classes from './DetailCourse.module.css';
 import { RiEyeLine } from 'react-icons/ri';
 import { MdKeyboardBackspace } from 'react-icons/md';
-import { FcGraduationCap, FcReading, FcFullTrash } from 'react-icons/fc';
+import {
+  FcGraduationCap,
+  FcReading,
+  FcFullTrash,
+  FcExport,
+} from 'react-icons/fc';
 
 function toLowerCaseNonAccentVietnamese(str) {
   str = str.toLowerCase();
@@ -40,6 +46,8 @@ const DetailCourse = () => {
   const [searching, setSearching] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [selectQuestion, setSelectQuestion] = useState(undefined);
+  const [showModalExport, setShowModalExport] = useState(false);
+  const [contentExport, setContentExport] = useState('');
 
   const { id } = useParams();
   const navigate = useNavigate();
@@ -98,11 +106,39 @@ const DetailCourse = () => {
       navigate(`/learn/pmg/${id}`);
     } else {
       navigate(`/learn/${id}`);
-    }    
+    }
+  };
+
+  const handleExport = () => {
+    const list = JSON.parse(localStorage.getItem(id)).data;
+    const t = list
+      .map((item) => {
+        return item.answer + '-----' + item.question;
+      })
+      .join('\n\n\n');
+    setContentExport(t);
+    setShowModalExport(true);
   };
 
   return (
     <div>
+      <Modal
+        closeButton
+        blur
+        aria-labelledby="modal-titlea"
+        open={showModalExport}
+        onClose={() => {
+          setShowModalExport(false);
+        }}
+        width={'40%'}        
+      >
+        <Modal.Body>
+          <Textarea rows={30} value={contentExport} contentEditable={false}/>
+          <Button onPress={() => {
+            navigator.clipboard.writeText(contentExport)
+          }}>Copy to clipboard</Button>
+        </Modal.Body>
+      </Modal>
       <Modal
         closeButton
         blur
@@ -150,10 +186,13 @@ const DetailCourse = () => {
                       navigate('/course/pmg/' + id + '/exam');
                     } else {
                       navigate('/course/' + id + '/exam');
-                    }    
+                    }
                     break;
                   case 'Delete':
                     handleDelete();
+                    break;
+                  case 'Export':
+                    handleExport();
                   default:
                     break;
                 }
@@ -175,6 +214,14 @@ const DetailCourse = () => {
                   icon={<FcGraduationCap size={20} />}
                 >
                   Take exam
+                </Dropdown.Item>
+                <Dropdown.Item
+                  key="Export"
+                  description="Export course to text for Quizlet"
+                  color="secondary"
+                  icon={<FcExport size={20} />}
+                >
+                  Export to quizlet
                 </Dropdown.Item>
               </Dropdown.Section>
               <Dropdown.Section title={'Danger Zone'}>
@@ -203,7 +250,10 @@ const DetailCourse = () => {
           </Text>
           <Text css={{ textAlign: 'center' }}>
             Number of completed:{' '}
-            <strong>{infoCourse.data.filter(item => item.learned === true).length} / {infoCourse.data.length}</strong>
+            <strong>
+              {infoCourse.data.filter((item) => item.learned === true).length} /{' '}
+              {infoCourse.data.length}
+            </strong>
           </Text>
           <Spacer y={2} />
           <div className={classes.search}>
