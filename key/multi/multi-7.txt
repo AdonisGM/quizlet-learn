@@ -1,0 +1,69 @@
+b, c, d-----Which of the following are examples of external customers? Select all that apply.
+a. Team members
+b. Suppliers
+c. Consumers
+d. Contractors
+
+
+a, d-----What are two potential consequences of a project manager failing to properly initiate a project?
+a. Stakeholders might not agree on what success looks like.
+b. New dependencies can arise
+c. External risks can affect project success
+d. Resources can be underestimated
+
+
+c, d-----As a project manager, you realize that with the current timeline, it’s unlikely you will meet the project deadline. Which of the following strategies could help you meet the deadline? Select all that apply.
+a. Request more resources, such as an additional team member.
+b. Revise the project schedule without stakeholder approval.
+c. Eliminate any unnecessary tasks.
+d. Identify tasks that can be done in parallel.
+
+
+a, b, d, e-----How do graphs and charts help present data? Select all that apply.
+a. Analyze trends and behaviors over set periods of time
+b. Inform the audience about a new trend or valuable piece of information
+c. Puzzle the audience to think more intensely and remember the data
+d. Compare values and demonstrate how individual parts contribute to a whole
+e. Demonstrate the relationships between data sets
+
+
+a, c, d-----What are potential downsides of using instant messaging? Select all that apply.
+a. Difficult to track
+b. Informality
+c. Quick response
+d. Distraction
+
+
+a, c, d-----What should a project closing report’s resources section include? Select all that apply
+a. Links to the original project
+b. Phone numbers of all team members and stakeholders
+c. Technical information for product deliverables
+d. Documentation of stakeholder feedback
+
+
+a, c, d-----Your team has completed their project, but you’ve neglected to close it out and confirm all work is done. What sort of impact can this create for your organization? Select all that apply. 
+a. Damage your relationship with the customer or client
+b. Remove unnecessary budgetary expenses
+c. Put your organization at legal risk
+d. Negatively impact scheduled launch dates
+
+
+a, d-----How does an Agile team create and maintain the right interpersonal and team dynamics to deliver value for the customers and the business? Select all that apply.
+a. They know face-to-face conversations are the most effective way to communicate
+b. They do not waste time on face-to-face feedback
+c. They do their work during intense periods of high workloads followed by periods of light workload
+d. They build projects around motivated individuals
+
+
+a, b-----In the VUCA concept, what does volatility refer to? Select all that apply.
+a. A high likelihood of disruptions in your operations
+b. The rate of change and churn in a business or situation
+c. The high number of interrelated forces that influence a project
+d. A lack of predictability
+
+
+b, c, d-----What are a Product Owner’s responsibilities? Select all that apply.
+a. Facilitate Scrum events such as the Sprint Planning and Retrospective 
+b. Help the team understand the overall goal and mission of the project
+c. Make sure the product fulfills the customers’ needs
+d. Clearly communicate and prioritize the Product Backlog

@@ -1,0 +1,320 @@
+b, c-----Which of the following activities are steps in a stakeholder analysis? Select all that apply.
+
+a. Determine which stakeholders should be excluded from the project
+b. Assess each stakeholder's level of interest and influence
+c. List the stakeholders impacted by the project
+d. Assess each stakeholder's reputation and level of experience
+
+
+a, c, d-----Digital documents, such as Google Docs or Microsoft Word, help a project manager complete what three tasks?
+
+a. Create agendas
+b. Chat efficiently with the team
+c. Outline project scope and next steps
+d. Track and review team processes
+
+
+a, b, d, e-----A spreadsheet is a versatile tool that helps a project manager to do what? Select all that apply.
+
+a. Manage budgets
+b. Track tasks
+c. Communicate with teammates
+d. Build charts
+e. Create timelines
+
+
+a, c-----Who does the project manager need to get approval from before indicating a Go for the project? Select all that apply.
+a. Key stakeholders
+b. Vendors
+c. Project sponsor
+d. Project team members
+
+
+a, b-----Collaboration tools allow teammates to do what two tasks?
+
+a. Check in with each other efficiently
+b. Comment on topics related to the project
+c. Demonstrate an overview of the project
+d. Visualize the team's progress
+
+
+b, c, d-----What details should be in your project charter? Select all that apply.
+
+a. Stakeholder analysis
+b. Project goals
+c. Deliverables
+d. Scope
+e. Detailed project plan
+
+
+a, c-----In which of the following scenarios does the project manager implement documentation well? Select all that apply.
+a. The key stakeholder determines they want to add a feature to the product in development. The project manager includes this update in the project charter and communicates it to the team.
+b. Because the project manager doesn't have all the project's details, they ask a current team member to onboard the new team member.
+c. The project manager shares the project timeline on a cloud-based document sharing program.
+d. A stakeholder talks with two different team members and receives conflicting information on a vendor. They cannot find information about the vendor in the shared document drive.
+
+
+a, d-----Work management tools primarily help a project manager complete what two tasks?
+a. Track and visualize the team's progress
+b. Quickly communicate with team members
+c. Build documents, such as meeting agendas
+d. Assign roles to team members
+
+
+b, c, d-----Why is it important for a project manager to properly document a project? Select all that apply.
+a. Proper documentation ensures nothing in the project can go wrong.
+b. Proper documentation can pave the way for the success of the project within the time constraints.
+c. Without proper documentation the team members may receive conflicting information about the project.
+d. Proper documentation helps communicate any changes to the project's scope.
+
+
+a, b-----Collaboration tools such as email or chat allow teams to do what tasks? Select all that apply.
+a. Check in on project tasks
+b. Work collectively and closely with other team members
+c. Plan the budget
+d. Visualize project task completion
+
+
+a, b, d-----As a project manager, you're trying to take all the right steps to prepare for the project. What steps should you take? Select all that apply.
+
+a. Identify and prepare for risks that could impact the project.
+b. Understand the work the team needs to do to achieve their goals.
+c. Coordinate the current budget to match other project budgets.
+d. Form the project plan with the team so they have a shared understanding of the project.
+
+
+b, c, d-----Imagine that you're a project manager trying to complete a website design. What three activities might be tasks that must be accomplished to complete the project?
+
+a. Host a check-in meeting with the team
+b. Test the website for usability
+c. Create initial mock-ups of the website
+d. Implement feedback by the designer
+
+
+a, b-----When assigning tasks to team members, what two factors should you mainly consider?
+
+a. Project timeline
+b. Overall workload
+c. Task interest
+d. Task novelty
+
+
+a, b, d-----Which of the following are important to understand in the planning phase? Select all that apply.
+
+a. Schedules
+b. Budgets
+c. Customer feedback
+d. Risk management
+
+
+a, b, c, d-----What four items do stakeholders need to approve before the planning phase can begin?
+
+a. Project charter
+b. Project goals
+c. Project scope
+d. Project deliverables
+e. Project name
+
+
+b, c, d-----What are the benefits of the project planning phase? Select all that apply
+
+a. Keep teammates from communicating to avoid groupthink when brainstorming ideas.
+b. Understand the work the team needs to do to achieve their goals
+c. Get buy-in from key members of the project team
+d. Coordinate efforts and timelines with other teams
+Identify and prepare for risks
+
+
+a, c, d-----Imagine that you're a project manager trying to complete a website design. What three activities might be tasks that must be accomplished to complete the project?
+
+a. Test the website for usability
+b. Host a check-in meeting with the team
+c. Implement feedback by the designer
+d. Create initial mock-ups of the website
+
+
+a, b, c-----When creating milestones as a project manager, what should you avoid? Select all that apply.
+
+a. Using milestones as tasks because milestones should represent big moments in time and tasks are how to get there
+b. Having no milestones because tasks are all you need to complete the project
+c. Setting too many milestones because you want to appear ambitious to stakeholders
+d. Managing your milestones in one project management tool to stay organized
+
+
+c, d-----When assigning tasks to team members, what two factors should you mainly consider?
+
+a. Task novelty
+b. Task interest
+c. Project timeline
+d. Overall workload
+
+
+a, b, d-----Imagine that you're a project manager trying to complete a website design. What three activities might be tasks that must be accomplished to complete the project?
+
+a. Create initial mock-ups of the website
+b. Test the website for usability
+c. Host a check-in meeting with the team
+d. Implement feedback by the designer
+
+
+a, b, c-----When creating milestones as a project manager, what should you avoid? Select all that apply.
+
+a. Setting too many milestones because you want to appear ambitious to stakeholders
+b. Using milestones as tasks because milestones should represent big moments in time and tasks are how to get there
+c. Having no milestones because tasks are all you need to complete the project
+d. Managing your milestones in one project management tool to stay organized
+
+
+a, c-----What are two benefits of making a work breakdown structure (WBS)?
+
+a. You and your teammates can easily identify the tasks you assigned to each milestone.
+b. You can get a sense of each stakeholder's workload.
+c. You have a visualization tool that assists in assigning tasks.
+d. You can assign tasks to two or more team members.
+
+
+a, c, d-----Project managers should follow which three best practices when assigning tasks to complete milestones?
+
+a. Balance the workload of tasks between teammates.
+b. Assign deadlines to tasks, but not milestones.
+c. Consider teammates' familiarity with the tasks.
+d. Add an assignee and due date to each task.
+
+
+a, b-----Which of the following are relevant project documents you should link to in your project plan? Select all that apply.
+
+a. RACI charts that define roles and responsibilities for individuals on a team
+b. The project charter that defines the project and outlines project goal details
+c. Daily review emails and messages between the stakeholders, project manager, and project team
+d. The organization chart that depicts everyone who works in the company with their contact information
+
+
+b, c, d-----A project manager is leading an initiative that includes changing an organization's logo and slogan. What mandatory tasks should be part of the critical path? Select all that apply.
+
+a. Get employees to respond positively in a survey
+b. Determine a new slogan
+c. Set a budget
+d. Receive sponsor approval
+
+
+b, c, d-----Which of the following scenarios exemplify how a project manager can use interpersonal skills? Select all that apply.
+
+a. The timeline is set for the Office Green project. You tell the web designer on Wednesday that you'll need a complete mock up for the site by Friday.
+b. The web designer on your project tells you that they're not sure they can meet the deadline for all the mock up pages. You ask the designer some questions about the project, such as what amount of time they need for each page mock so you can help prioritize what is feasible.
+c. The person on your team in charge of contracts now needs to split their work time with another team. You request a meeting with that team's project manager to identify if any of their project deliverable dates are competing with your project's timeline.
+d. You're managing a project with team members who are on multiple projects. You asked the team members to prioritize your project because you know there are many overlapping due dates.
+
+
+b, c, d-----Tools like Gantt charts and Kanban boards help benefit team members in what three ways?
+
+a. They can translate project contracts like the statement of work (SOW) into number and dollar amounts.
+b. They can illustrate when they need to complete their individual tasks.
+c. They can demonstrate how their individual tasks connect to other tasks in the project.
+d. They provide clear context about work project details.
+
+
+a, b, d-----Which of the following strategies could help a team meet a project deadline? Select all that apply.
+
+a. Streamline tasks
+b. Increase the team size
+c. Rush through task planning
+d. Eliminate unnecessary tasks
+
+
+b, c, d-----What two steps can a project manager take to overcome the planning fallacy?
+
+a. Increase the project's budget.
+b. Expand the project's scope.
+c. Consider all risks and carefully examine them.
+d. Meet with teammates to uncover potential risks.
+
+
+b, c, d-----Which of the following are some steps to create a critical path? Select all that apply.
+
+a. Consult your main customer.
+b. Make time estimates.
+c. Create a network diagram.
+d. Set dependencies.
+
+
+b, d-----What tools can a project manager use to account for issues that may cause a project delay? Select all that apply.
+
+a. Sub-tasks
+b. Task buffer
+c. Gantt chart
+d. Project buffer
+
+
+a, b, c, f-----What are the benefits of a Gantt chart? Select all that apply.
+
+a. It features the start and end dates of each task
+b. It's a highly visual representation of the project's tasks
+c. It has a clear breakdown of who's responsible for what work
+d. It displays comments from stakeholders
+e. It allows easy communication between teammates
+f. It shows when tasks are due for a project
+
+
+b, c, d-----As a project manager, you realize that with the current timeline, it's unlikely you will meet the project deadline. Which of the following strategies could help you meet the deadline? Select all that apply.
+
+a. Revise the project schedule without stakeholder approval.
+b. Eliminate any unnecessary tasks.
+c. Request more resources, such as an additional team member.
+d. Identify tasks that can be done in parallel.
+
+
+a, b, d-----When creating a critical path, what does a network diagram help visualize? Select all that apply.
+
+a. Which non-essential tasks are not on the critical path
+b. The path of work from the start to the end of the project
+c. Which skilled teammate can work on each task
+d. The tasks that can be performed in parallel
+
+
+b, c, d-----Which of the following should you include in a project plan that are essential for project success? Select all that apply.
+
+a. Links to tasks in previously successful projects
+b. All project tasks
+c. Specifically who are completing what tasks
+d. A timeline of when the team will complete the tasks
+
+
+b, c, d, e-----Which of the following are included in the project plan? Select all that apply.
+
+a. Retrospectives
+b. Time
+c. People
+d. Tasks
+e. Documentation
+
+
+a, c, d-----Which of the following are steps in the procurement process? Select all that apply.
+
+a. Contract writing
+b. Analyzing
+c. Initiating
+d. Controlling
+
+
+b, c, d-----Which of the following factors can lead to scope creep and negatively affect the budget? Select all that apply.
+
+a. Attainable timeframes and deadlines
+b. A vague Statement of Work (SoW)
+c. Agreements about the project that aren't officially documented
+d. Last-minute asks from priority stakeholders
+
+
+b, c, d-----Which three costs are examples of resource cost rates?
+
+a. The cost of a task buffer
+b. The cost of software to help manage a project
+c. The cost of labor for a project team
+d. The cost of materials when building a house
+
+
+a, b, c-----When creating a budget, a project manager must do which of the following? Select all that apply.
+
+a. Budget for surprise expenses
+b. Review and reforecast throughout the project
+c. Understand stakeholder needs
+d. Approve budget increases

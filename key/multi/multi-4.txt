@@ -1,0 +1,322 @@
+a, c, d-----The risk management process can provide project managers a better understanding of what information? Select all that apply.
+
+a. What could go wrong with the project
+b. When exactly the risk will occur
+c. Who the project manager needs to consult about a risk
+d. How could the project manager mitigate the potential risk
+
+
+a, b, d-----Why should project managers communicate risks clearly to key stakeholders? Select all that apply.
+
+a. To get them to provide additional teammates, if necessary
+b. To increase trust in the relationship
+c. To deflect blame on project issues, if necessary
+d. To convince them to provide an increase in budget, if necessary
+
+
+a, b, c-----Which of the following risk types most commonly impact projects? Select all that apply.
+
+a. Budget risks
+b. Scope risks
+c. Time risks
+d. Inherent risks
+
+
+b, c, d-----What does a risk management plan typically contain? Select all that apply.
+
+a. A competitor analysis for each risk
+b. An executive summary
+c. Probability estimates for each risk
+d. A mitigation plan for each risk
+
+
+a, b, d-----Which steps should be taken when updating a risk management plan? Select all that apply.
+
+a. Remove risks that are no longer relevant.
+b. Include any changes in the mitigation plans.
+c. Move the plan to a confidential folder.
+d. Add newly-identified risks.
+
+
+c, d-----Which of the following are examples of external risk? Select all that apply.
+
+a. A breakdown in communication among team members
+b. A deliverable takes longer than anticipated to complete
+c. A project vendor goes out of business
+d. A change in regulatory requirements
+
+
+b, d-----Failing to engage in risk management for your project can have which two of the following consequences?
+
+a. You will not be able to use the appropriate tools
+b. You will not be able to meet project timelines and goals
+c. You will not be able to establish necessary vendor relationships
+d. You will not be able to make necessary adjustments to the project plan
+
+
+a, b, c, d-----Which four of the following should project managers identify before creating a communication plan?
+
+a. Communication barriers
+b. Communication methods
+c. Project stakeholders
+d. Communication goals
+e. Anonymous survey questions
+f. Project risks
+
+
+b, c, d, e, g-----What details does a communication plan include? Select all that apply.
+
+a. How communications should sound
+b. Who should communicate
+c. Where the information communicated is stored
+d. Why and how to communicate
+e. What to communicate
+f. How long communications should be
+g. When communication happens
+
+
+c, d-----As a project manager, you have a weekly video conference with stakeholders as part of your communication plan. What two additional details should the communication plan include?
+
+a. Location
+b. Duration
+c. Goal
+d. Key dates
+
+
+a, b, c-----Why should you share your communication plan document with your team? Select all that apply.
+
+a. Let them offer feedback
+b. Ensure you aren't missing crucial information
+c. Make them aware of the plan
+d. Let them make changes to the plan
+
+
+c, d-----An effective project management communication plan can help with which of the following processes? Select all that apply.
+
+a. Team selection
+b. Culture development
+c. Project continuity
+d. Change management
+
+
+b, c-----Which two tools can help determine the best type of communication for those involved with the project?
+
+a. Project charter
+b. Stakeholder map
+c. RACI chart
+d. Risk register
+
+
+a, c, d-----Which three of the following tools can help organize project plans and documents?
+
+a. An overview sheet (dashboard)
+b. A RACI chart
+c. A centralized planning document
+d. A shared file drive
+e. A stakeholder map
+
+
+a, d-----How can you foster effective communication within your team? Select all that apply.
+
+a. Obtain feedback and incorporate it going forward
+b. Allow teammates to use any communication platform they prefer
+c. Send identical message content to both teammates and stakeholders
+d. Recognize and understand individual differences
+
+
+b, d-----As a project manager, you decide to hold video conferences with your core project team and stakeholders as part of your communication plan. What two additional details should the communication plan include?
+
+a. Location
+b. Resource locations
+c. Duration
+d. Key dates
+
+
+c, d-----An effective project management communication plan can help with which of the following processes? Select all that apply.
+
+a. Culture development
+b. Team selection
+c. Project continuity
+d. Change management
+
+
+c, d-----Which two tools can help determine the best type of communication for those involved with the project?
+
+a. Project charter
+b. Risk register
+c. Stakeholder map
+d. RACI chart
+
+
+b, d-----How can project managers ensure plan visibility for stakeholders? Select all that apply.
+
+a. Create a risk register
+b. Keep documents in a centralized location
+c. Assign tasks to specific team members
+d. Manage document permissions to give access to relevant information
+
+
+a, c, d-----Which of the following should a project manager include in a centralized planning document, also known as a dashboard? Select all that apply.
+
+a. Instructions for how to use the centralized planning document
+b. Previous project deliverables
+c. Links to any non-spreadsheet files
+d. A brief project description
+
+
+a, b, c, d, e-----Which five of the following categories are part of a communication plan?
+
+a. Recipients
+b. Communication goals
+c. Delivery methods
+d. Communication type
+e. Key dates
+f. Communication style
+
+
+a, b, d-----What are the key benefits of a communication plan? Select all that apply.
+
+a. Keeps people engaged and motivated throughout the project
+b. Improves overall effectiveness of communication
+c. Provides guidance on technical project terms
+d. Involves stakeholders in effective conversations
+
+
+a, b, d-----What questions can project managers ask to optimize and streamline communications? Select all that apply.
+
+a. What is working in how we communicate with you about the project?
+b. How can we improve communications with you?
+c. How are you implementing the content we communicate?
+d. What is not working or is not effective in our communication?
+
+
+a, c, d-----Which of the following is true of effective communication in project management? Select all that apply.
+
+a. It is clear, relevant, and frequent
+b. It does not require follow-ups
+c. It helps projects run on time and meet expectations
+d. It continues throughout the entire project
+
+
+b, c, d-----As a project manager, part of your communication plan is to identify risks and present barriers in-person. What two additional details should the communication plan include?
+
+a. Duration
+b. Type of communication
+c. Frequency
+d. Location
+
+
+a, c, d-----Which three of the following scenarios represent a deviation from a project plan?
+
+a. A production facility goes out of business
+b. A project team hits a major milestone on schedule
+c. A company increases its budget for a project
+d. A lead designer quits to take another job
+
+
+b, c-----Imagine that a toy company is known for making a popular doll, but their design team decides to test out a new material for the doll's clothes before beginning a new batch. This test has what two types of dependencies?
+
+a. Mandatory dependency
+b. Internal dependency
+c. Discretionary dependency
+d. External dependency
+
+
+a, b, c-----How can escalation benefit a project? Select all that apply.
+
+a. Provides checks and balances
+b. Speeds up decision-making
+c. Encourages team participation
+d. Makes external dependencies trackable
+
+
+a, b, c, e, f-----Which five items should you track throughout the project execution phase?
+
+a. Progress toward milestones
+b. Action items
+c. Project schedule
+d. Project goals
+e. Key tasks and activities
+f. Project costs
+
+
+a, c-----Which of the following methods can be used to communicate change to stakeholders during a project? Select all that apply.
+
+a. Change request form
+b. Project charter
+c. Escalation email
+d. Work breakdown structure
+
+
+a, c-----Imagine that a restaurant is moving to a new location and must pass a government health inspection before it can open. What type of dependency is the inspection? Select all that apply.
+a. External dependency
+b. Discretionary dependency
+c. Mandatory dependency
+d. Internal dependency
+
+
+a, b, c-----What should you do in an escalation email? Select all that apply.
+
+a. Make a request.
+b. Explain the problem.
+c. State your connection to the project.
+d. Be serious and assert authority.
+
+
+a, b-----What two common problems can a project manager avoid by escalating an issue?
+a. Trench wars
+b. Misdirected compromises
+c. Force majeure
+d. Risk appetite
+
+
+a, b, c-----Which parts of a company ecosystem rely on continuous improvement to have collective and separate successes? Select all that apply.
+a. Portfolios
+b. Projects
+c. Programs
+d. Performances
+
+
+b, d-----In which two of the following categories can project managers group metrics?
+a. Documentation metrics
+b. Productivity metrics
+c. Reliability metrics
+d. Quality metrics
+
+
+a, b, c-----Which of the following are examples of quality metrics? Select all that apply.
+a. cost variance
+b. number of changes
+c. issues
+d. tasks
+
+
+a, c, d, e-----Which of the following include visual representations of data? Select all that apply.
+a. infographics
+b. statistics
+c. mappings
+d. dashboards
+e. charts
+
+
+a, c, d, e-----Which of the following are ways you can be flexible during a presentation? Select all that apply.
+a. Practice to avoid mistakes that could distract from your message
+b. Limit practicing so you can improvise based upon audience body language
+c. Consider the approach you'd take if an unforeseen event shortens your presentation
+d. Imagine and prepare for possible objections
+e. Identify and come up with answers to potential audience questions
+
+
+a, b, d-----What tactics can project managers use to prioritize data? Select all that apply.
+a. Prioritize tasks that contribute most to the project goal
+b. Identify and respond to signals
+c. Set hard deadlines
+d. Align metrics to stakeholder priorities
+
+
+b, c, d, e-----Which of the following tactics may help you be memorable during a presentation? Select all that apply.
+a. Confirm the audience has no questions before you start.
+b. Pace yourself by using intentional pauses.
+c. Make eye contact and use friendly facial expressions.
+d. Maintain an upright posture with hands at your side.
+e. Elevate the volume of your voice to emphasize key points.

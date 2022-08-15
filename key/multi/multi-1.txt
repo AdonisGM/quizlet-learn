@@ -1,0 +1,289 @@
+a, b, d-----Agile project management works well with projects that take an iterative approach. What does this mean? Select all that apply.
+a. Project deliverables improve continuously based on feedback
+b. The team operates within many short blocks of time
+c. The project will take longer to complete
+d. Project processes are repeated many times during the life cycle of the project
+
+
+a, c, d-----As an Agile project manager, you should value individuals and interactions over processes and tools. What does this mean for your team? Select all that apply.
+a. Improve collaboration within the team by effectively using processes and tools to drive and facilitate your project.
+b. Forgo using processes and tools in order to speed up the production process.
+c. Work together with your team to help each other achieve the best outcomes possible.
+d. Have brief conversations rather than long, drawn out email exchanges.
+
+
+a, b, d-----How do Agile teams collaborate with their business partners and stakeholders to create business value for the organization and their users? Select all that apply.
+a. Work together with business people and developers throughout the project
+b. Help each other achieve the best outcome
+c. Gather feedback at the end of the project only
+d. Welcome changing requirements
+
+
+a, b, c-----You're the lead project manager at Office Green LLC, a commercial landscaping company focused on interior plant design. Your company's market research team identifies a major shift to workers setting up home offices. Your team wants to pursue this business opportunity.
+The goal is to deliver their new service, called Virtual Verde, and you don't have any existing project plans to build off of or time to do a lot of prep work. Which factors do you face? Select all that apply.
+a. Complexity
+b. Uncertainty and ambiguity
+c. Volatility
+d. Budget constraints
+
+
+b, c, d-----How can the VUCA concept help you decide to use Agile or Waterfall? Select all that apply.
+a. It helps determine if your project needs more predictive stability than the Waterfall method provides.
+b. It helps determine if your project is too ambiguous for the Waterfall method.
+c. It helps determine whether your project is too volatile for the Waterfall method.
+d. It helps determine how complex your project is.
+
+
+b, c, d-----As a project manager, what are some reasons you might choose to follow a Scrum methodology? Select all that apply.
+a. It supports and reinforces the Waterfall model.
+b. It's free and open for everyone.
+c. It offers a regular and predictable meeting and delivery schedule, with predefined agendas and outcomes for the meetings.
+d. It has clear roles and responsibilities for your team, but emphasizes the power of the team as a whole.
+
+
+b, c, d-----As a project manager, when can an Agile methodology best support your project? Select all that apply.
+a. When the project faces constraints, including costs or time
+b. When the project receives feedback from diverse stakeholders, with competing interests
+c. When the project may need adjustments along the way
+d. When the project deliverable is not yet clear
+
+
+a, b, d-----As an Agile project manager, why is it important to value customer collaboration over contract negotiation? Select all that apply.
+a. It encourages your team to seek out every opportunity to include the customer or stakeholder during project execution.
+b. It reinforces that customer satisfaction is the highest priority when building a high quality and valuable product.
+c. It saves your organization time and money.
+d. It allows the freedom to collaborate with customers early and often.
+
+
+b, c-----Where does Scrum get its name? Select all that apply.
+a. Scrum refers to a football team's huddle.
+b. Scrum refers to a formation in rugby where players huddle closely together with their heads down while trying to gain possession of the ball.
+c. The purpose of the rugby scrum is for each player on the team to play their role in order to work together and achieve their shared goal.
+d. Scrum is an acronym for the processes that make up the Agile methodology.
+
+
+a, d-----You are managing a project and your customer does not know which features they want in the end product. How can Agile help solve your customer's problem? Select all that apply.
+a. Agile helps your team frequently and quickly get customer feedback. This enables you to make changes as needed and give your customer the product they really want.
+b. Agile helps you create a product requirements document, formally-approved project plans, and a change control board, with the aim of protecting the team from building something that the customer doesn't want and minimizing any changes.
+c. Agile enables you to produce more than one version of the product. Then, the customer can decide which one they prefer.
+d. Agile acknowledges the fact that things change and is designed to embrace these changes as your project progresses.
+
+
+a, b, d-----What does it mean to say that Agile project management takes an iterative approach? Select all that apply.
+a. The project processes are repeated
+b. The team takes a subset of all the project's activities and does all the work
+c. The activities are completed in a linear fashion
+d. The team operates within many shorter blocks of time
+
+
+a, c, d-----What does the Agile Manifesto mean by value delivery? Select all that apply.
+a. Simplify and maximize the amount of work not done
+b. Save clients as much money as possible
+c. Deliver products quickly and frequently
+d. Deliver highly valuable products to customers
+
+
+a, b, c-----In the three pillars of Scrum Theory, what does inspection refer to? Select all that apply.
+a. Performing regular evaluations in order to find improvements
+b. Continuously checking in on progress and deliverables to detect any undesirable changes
+c. Conducting timely checks towards the outcome of a sprint goal to detect undesirable variances
+d. Allowing stakeholders a look into project plans
+
+
+a, b, d-----In Scrum, the Product Owner is responsible for what? Select all that apply.
+a. Ensuring the product or service fulfill the customers' needs
+b. Helping the Developers understand what to build
+c. Coaching and facilitating Scrum events
+d. Prioritizing the Product Backlog
+
+
+a, b, c-----What are some of the tasks Product Owners are responsible for? Select all that apply.
+a. Continuously maximize the value of the product delivered by the Scrum Team
+b. Ensure the team builds the right product or service
+c. Ensure the Product Backlog is visible and transparent to all
+d. Deal with vendors and contract negotiations
+
+
+a, c, d-----What are some of the main responsibilities of a Scrum Master? Select all that apply.
+a. Coaching team members to use Agile and Scrum practices
+b. Acts as the voice of the customer
+c. Facilitates scrum events such as Sprint Retrospectives
+d. Minimizes unhelpful interactions or interruptions coming from outside of the team
+
+
+b, c, d-----What are the key characteristics of successful Product Owners? Select all that apply.
+a. Independent
+b. Customer-focused
+c. Collaborative
+d. Optimistic
+
+
+a, b, c, e-----Scrum Teams behave according to what core values? Select all that apply.
+a. Respect
+b. Focus
+c. Commitment
+d. Dissension
+e. Openness
+
+
+a, c, d-----What are attributes of a project team that uses Scrum development? Select all that apply.
+a. Cross-functional
+b. Independent
+c. Customer-oriented
+d. Self-managing
+
+
+a, b-----Which of the following are responsibilities that a Product Owner would typically have and a project manager would not have? Select all that apply.
+a. Create and communicate Product Backlog items
+b. Timebox management
+c. Monitor team performance
+d. Manage stakeholders
+
+
+a, c-----What two qualities should a successful Development Team possess? Select all that apply.
+a. Cross-functional
+b. Independent
+c. Self-organizing
+d. Self-sufficient
+
+
+a, c-----Which two of the following statements regarding a product vision are correct?
+a. A product vision makes it clear where your team's boundaries are.
+b. A product vision tells your team the specific tasks they need to complete.
+c. A product vision helps your team imagine what the work will be like when they're done.
+d. A product vision is a short statement that stays constant throughout the project.
+
+
+a, b, d-----What are a Product Owner's responsibilities? Select all that apply.
+a. Clearly communicate and prioritize the Product Backlog
+b. Make sure the product fulfills the customers' needs
+c. Facilitate Scrum events such as the Sprint Planning and Retrospective
+d. Help the team understand the overall goal and mission of the project
+
+
+a, c, d-----What are some key skills a successful Scrum Master should have? Select all that apply.
+a. Leadership
+b. Budgeting
+c. Coaching
+d. Communication
+
+
+b, c-----What are the benefits of locating a team in the same physical space (also known as co-locating)? Select all that apply.
+a. The team collaborates effectively over video conferencing platforms.
+b. The team gets together quickly to get work done or solve a problem.
+c. The team delivers a higher quality of work at a quicker rate.
+d. The team works across time zones by coordinating schedules.
+
+
+a, b, d-----What does the Scrum Team reflect on during a Sprint Retrospective? Select all that apply.
+a. Were the improvements in the last Sprint helpful or not?
+b. What improvements are worth exploring in the next Sprint?
+c. Who was at fault for not accomplishing a story?
+d. What's working or not working for the team regarding the people, the processes, and the tools?
+e. What updates should the team make to user stories in the next Sprint?
+
+
+a, c, d-----Why would a Scrum Team use a Kanban board? Select all that apply.
+a. To visualize tasks
+b. To take fewer notes
+c. To make it easier to notice work-in-progress (WIP) limits
+d. To give a better sense of the team's flow of work
+
+
+b, d, e-----As a Product Owner building a Backlog, what three pieces of information should you include for each item?
+a. Step-by-step instructions on how to complete the item
+b. The level of effort to complete the item
+c. The date the item is due
+d. A set value for each item, such as dollar signs
+e. A clear description from the perspective of the customer
+
+
+a, c, d-----Which of the following typically happens during a Sprint? Select all that apply.
+a. The Product Backlog is refined by the Product Owner as needed.
+b. The Sprint Goal is changed by the Product Owner as needed.
+c. The project scope is clarified with the Product Owner as more is learned.
+d. The work quality improves—or at least stays the same—when compared to the last Sprint.
+
+
+a, b, c-----Which of the following may indicate a task meets the Definition of Done? Select all that apply.
+a. The product passes all testing requirements.
+b. The Product Owner accepts the story.
+c. An independent peer group reviews the product.
+d. The product meets half of the acceptance criteria.
+
+
+a, b, d-----What are some common pitfalls of making a product roadmap? Select all that apply.
+a. Pressure teams to achieve deadlines no matter what it takes
+b. Put more work into the roadmap than the deliverables
+c. Conduct regular reviews of the roadmap with stakeholders and the team
+d. Let stakeholders think the roadmap is set and unchangeable
+
+
+a, c, d-----Imagine you are a project manager for a software company. Your team plans to develop a new learning management system (LMS) for a local school district by the end of the quarter. Which of the following factors can potentially push back your release plan date? Select all that apply.
+a. A member of your development team leaves to take a new job.
+b. The school district increases the project budget and provides additional resources.
+c. The Product Owner expands the project to include two additional school districts.
+d. Your team realizes an epic will take more time to complete than anticipated.
+
+
+a, b-----As a project manager, your organization makes a shift to Agile. To create a sense of urgency, which questions should you ask your team about what's working, and what's not working right now?
+a. What allows our competitors to outperform us and get their products and features to market more quickly?
+b. How can we help you become more productive and supported in your work?
+c. What can we do to cut costs in our product creation and Sprint process?
+d. How can we change the company's stated mission or values to better align with our work?
+
+
+a, c, d-----What can you do to avoid making too many or unfounded product assumptions? Select all that apply.
+a. Document assumptions and make them transparent to all.
+b. Ask the Product Owner to double-check and approve assumptions.
+c. Conduct surveys or focus groups to double-check assumptions, where necessary.
+d. Discuss assumptions as a team.
+e. Reuse assumptions from similar, past projects.
+
+
+a, d, e, f-----Which of the following are product roadmap best practices? Select all that apply.
+a. Make the roadmap highly noticeable to the team and refer to it frequently.
+b. Inform the team you finalized the roadmap.
+c. Fine-tune delivery dates for accuracy well in advance.
+d. Conduct regular reviews with sponsors, stakeholders, and the team.
+e. Indicate highest priority and highest value items.
+f. Make the roadmap highly visible to stakeholders.
+
+
+b, c, e-----What can you do to address instability when people leave and join your team frequently? Select all that apply.
+a. Ask new team members to create up-to-date project documentation before starting work.
+b. Use pair programming so new team members can learn on the job.
+c. Create a quick onboarding process for new team members.
+d. Use financial incentives to keep team members from leaving.
+e. Schedule shorter sprints so departing team members can wrap up work.
+
+
+a, c, d-----Which of the following are components of a typical value roadmap? Select all that apply.
+a. A product roadmap
+b. A product playbook
+c. A release plan
+d. A product vision
+e. A mission statement
+
+
+b, c, d-----Imagine you are a project manager for a mobile game that is experiencing significant technical issues. While working on the update, your team members appear unhappy and arrive at work late. What can you do to boost morale and improve the quality of deliverables? Select all that apply.
+a. Push back the next release date to give the team more time
+b. Run a team brainstorm session to identify areas for improvement
+c. Take a training class on team dynamics and how to better work together
+d. Change up the workflows by pairing people to work together on hard tasks
+e. Require positive attitudes in team meetings
+
+
+b, d, e-----What are some of the benefits of developing and maintaining a product roadmap? Select all that apply.
+a. Teams follow a reliable plan that does not need to change
+b. Teams and stakeholders understand the sequence of deliverables
+c. Stakeholders meet with the Product Owner less frequently throughout the project
+d. Stakeholders notice incremental value over the course of the project
+e. Teams understand how their efforts relate to the project vision
+
+
+b, c-----Imagine you are a project manager leading Agile adoption at an organization. Why is it important that you find an executive sponsor to support the change? Select all that apply.
+a. It guarantees an increase in the project's budget.
+b. It increases your chances of successfully shifting organizational culture.
+c. It helps to create a sense of ownership for the change you are creating.
+d. It helps to answer your team's questions about what's working and what's not working right now.

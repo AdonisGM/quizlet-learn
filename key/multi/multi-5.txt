@@ -1,0 +1,286 @@
+a, b, c, e, f-----From the project manager perspective, which of the following are benefits of using data? Select all that apply.
+a. Understand performance
+b. Improve processes
+c. Solve problems
+d. Increase the project timeline
+e. Make better decisions
+f. Understand your users
+
+
+a, b, d-----Which of the following are ways to help you give an effective presentation? Select all that apply.
+a. Be memorable
+b. Be precise
+c. Be forceful
+d. Be flexible
+
+
+a, d-----Which of the following are true of work groups? Select all that apply.
+a. Their work is coordinated or controlled by a single person or entity.
+b. They work with minimal oversight.
+c. Their work is independent of a managerial hierarchy.
+d. They work toward a common goal.
+
+
+a, b-----In what two ways does delegating work make project managers more effective leaders?
+a. Allows project managers to focus on the project as a whole
+b. Gives team members a chance to add value to the project
+c. Lets team members feel safe asking questions
+d. Makes project managers better at meeting stakeholder needs
+
+
+b, d-----What responsibilities do project managers have during the forming stage of team development? Select all that apply.
+a. Listen as the team addresses problems
+b. Provide context about the project
+c. Establish new team norms
+d. Clarify project roles and goals
+
+
+a, c-----Imagine a tech company wants to use another firm's processor in its new laptop. The project manager writes to the firm's CEO about the mutual benefits and projected sales numbers. Which steps of effective influencing is the project manager demonstrating? Select all that apply.
+a. Provide evidence
+b. Establish credibility
+c. Frame for common ground
+d. Connect emotionally
+
+
+a, c, d-----As a project manager, which of the following are your organizational sources of power? Select all that apply.
+a. Role
+b. Character
+c. Network
+d. Reputation
+
+
+a, d-----Which of the following are strategies a project manager can use to provide air cover for their team? Select all that apply.
+a. Limit teammates' knowledge of stakeholder requests
+b. Increase the project's scope to satisfy stakeholder requests
+c. Take on tasks when stakeholders request additional work
+d. Reject a stakeholder request without explicitly saying "no"
+
+
+a, b, d-----Which three of the following are benefits of teamwork?
+a. Fosters creativity
+b. Encourages accountability
+c. Clarifies roles and responsibilities
+d. Helps teams meet project goals
+
+
+c, d-----In what two ways can project managers promote psychological safety?
+a. Reduce ambiguity by prioritizing tasks
+b. Create standardized, measurable, and scalable workflows
+c. Encourage contributions from team members of all ranks
+d. Schedule time for thoughtful, inclusive discussions
+
+
+a, d-----As a project manager, which of the following are personal sources of power? Select all that apply.
+a. Character
+b. Role
+c. Information
+d. Knowledge
+
+
+a, b, c, e-----Which of the following are steps in the ethical decision-making framework developed by the Markkula Center for Applied Ethics? Select all that apply.
+a. Recognize an ethical issue.
+b. Make a decision and test it.
+c. Get the facts.
+d. Weigh the benefits.
+e. Evaluate alternative actions.
+
+
+a, b, d-----Which of the following are true of teams? Select all that apply.
+a. Encourage accountability
+b. Collaborate to solve problems in service of a shared goal
+c. Follow the directives of a single person
+d. Foster creativity
+
+
+a, b-----As a project manager, you want to provide air cover for your team by not explicitly saying "no" to a stakeholder's request. Which of the following are two possible strategies to achieve this?
+a. Offer to get back to the stakeholder once you gather more information, which may provide time for the stakeholder to reconsider their request.
+b. Explain to the stakeholder that their request won't be possible under the current constraints of the project.
+c. Have each teammate email the stakeholder giving their perspectives on why the request cannot be completed.
+d. Refer the stakeholder to project management best practices such as how to effectively complete a project.
+
+
+a, b, c-----Which of the following actions can a project manager take to support team development? Select all that apply.
+a. Delegate tasks and motivate team members
+b. Resolve conflicts and listen as the team addresses problems
+c. Celebrate final milestones and successes
+d. Encourage competition between team members
+
+
+b, c, d-----What can project managers do to support ethical and inclusive leadership? Select all that apply.
+a. Delegate tasks and motivate team members
+b. Create equal opportunities for team members to succeed
+c. Foster a culture of respect
+d. Invite and integrate diverse perspectives
+
+
+a, b, d-----Which three of the following are benefits of work management and collaboration tools, such as Asana and Smartsheet?
+a. Focus communication within the context of specific tasks
+b. Make sharing information and documents easy
+c. Send instant messages to teammates
+d. Complete work in real time
+e. Run effective meetings
+
+
+a, c, d-----Which of the following may help you create an inclusive team environment in meetings? Select all that apply.
+a. Give everyone your full attention.
+b. Encourage participants to share a single, similar perspective.
+c. Formalize initial check-ins for the group.
+d. Use images that reflect the diversity of the world.
+
+
+a, b, c-----What can be done during a meeting to facilitate a more productive meeting? Select all that apply.
+a. Practice active listening and non-verbal communication.
+b. Clearly state the meeting's goals at the beginning of the meeting.
+c. Encourage everyone to participate, including remote participants.
+d. Discourage open-ended and personal questions.
+
+
+b, c, d-----What does a project manager have to communicate clearly when managing team documents? Select all that apply.
+a. Who originally created the documents
+b. How often the documents get updated
+c. Who has access to the documents
+d. How documents are used
+
+
+a, b, d-----The use, access, or sharing of what types of confidential or need-to-know information is likely prohibited unless you're given permission? Select all that apply.
+a. Internal information about your organization's products and services
+b. User data
+c. Customer service contact information
+d. Financial and business data
+
+
+c, d, e-----Which three of the following are ways to make a meeting more collaborative?
+a. Set a timebox for a meeting comment period
+b. Allow participants to set the meeting's purpose and expectation
+c. Ensure the agenda isn't full of presentations where participants are talked at
+d. Have a digital, shared meeting document
+e. Let participants respond in their preferred communication style
+
+
+a, b, d-----Which of the following are key reasons to meet with stakeholders? Select all that apply.
+a. Present a project update
+b. Make a decision or resolve a major issue
+c. Provide daily project updates
+d. Seek out and listen to feedback
+
+
+b, c, d-----What actions may help make a meeting accessible for someone with a hearing impairment? Select all that apply.
+a. Speak loudly and slowly.
+b. Include all the information presented in a spoken presentation on slides.
+c. Add closed captions or subtitles to videos.
+d. Face the person you are speaking with.
+
+
+a, b, d, e-----Which of the following elements do effective meetings always have in common? Select all that apply.
+a. Structured
+b. Intentional
+c. Anticipated
+d. Collaborative
+e. Inclusive
+
+
+a, b, d-----What actions may help make a presentation accessible for someone with a visual impairment? Select all that apply.
+a. Use a large font size (minimum 22 points).
+b. Describe all meaningful graphics in the presentation.
+c. Use low-contrast colors.
+d. Provide an accessible electronic format of the presentation.
+
+
+b, c, d-----What can be done before a meeting to facilitate a more productive meeting? Select all that apply.
+a. Recap key action items and share with participants.
+b. Invite only the people who need to be there and contribute to the meeting goals.
+c. Set aside time to prepare for the meeting and review necessary materials.
+d. Prepare an agenda that states the purpose and goals of the meeting.
+
+
+a, c, d-----What are the potential effects on a project team if a project is not closed properly? Select all that apply.
+a. Negatively impacts the team's time and effort
+b. Encourages the team to move on to new projects
+c. Lessons learned could be lost if not recorded correctly
+d. Diminishes the team's credibility
+
+
+a, b, c-----What are the main purposes of a closeout report? Select all that apply.
+a. Serves as a blueprint to document what the team did, how they did it, and what they delivered
+b. Evaluates the project's performance with respect to budget and schedule
+c. Provides an evaluation of the quality of work
+d. Gives the project manager time to meet with the team one last time to complete missing work
+
+
+b, c, d-----In what three ways does a small closing process at the end of each milestone differ from a formal, more comprehensive closing phase at the end of the project?
+a. After a milestone closing, during the project, there is no need to reach out to stakeholders.
+b. After a milestone closing, during the project, stakeholders provide feedback regarding any changes that need to be made going forward.
+c. A formal closing, at the end of a project, is the last step before a team disbands.
+d. A formal closing, at the end of a project, includes an impact reporting meeting.
+
+
+a, c, d, e-----What should a project manager do to ensure an effective closing process? Select all that apply.
+a. The project manager confirms the work is done and the agreed-upon closing processes are executed.
+b. The project manager invites the stakeholders to provide the notes from their independent retrospective.
+c. The project manager completes a project closeout report.
+d. The project manager gives the stakeholders an impact reporting presentation.
+e. The project manager hosts a retrospective meeting for the team.
+
+
+a, c, d-----Which of the following are true regarding a team celebration at the end of a project? Select all that apply.
+a. It fuels positive change within the team.
+b. It typically needs to be approved by stakeholders.
+c. It helps improve collaboration on future projects.
+d. It can be a team-building exercise.
+
+
+a, c, d-----What happens during a project closing? Select all that apply.
+a. The project manager and team confirms all project tasks are complete.
+b. The customer identifies new deliverables and ongoing task work.
+c. The team obtains formal recognition from key stakeholders that the project is complete.
+d. The team executes remaining project management processes, such as procedural or administrative work.
+
+
+a, b, d-----What are the main purposes of the project closeout report? Select all that apply.
+a. Review the project's performance in respect to budget and schedule
+b. Provide an evaluation of the quality of work
+c. Celebrate the team's success with a formal congratulations
+d. Document what the team did, how they did it, and what they delivered
+
+
+a, b, d-----For what three reasons is it important to close a project once it is complete?
+a. It protects the credibility of the project manager and project team.
+b. It helps an organization avoid unfavorable scenarios, such as stakeholders that are unaware the project has ended.
+c. It ensures an effective change management process.
+d. It helps project managers avoid incidents such as abandoned projects or never-ending projects.
+
+
+b, c, d-----What steps should a project manager take to make sure a project is closed? Select all that apply.
+a. Spend any remaining funds in the project's budget
+b. Ensure all agreed upon project management processes are complete
+c. Get formal recognition from stakeholders that the project is done
+d. Confirm all tasks and work are complete
+
+
+b, c, d-----What are the main purposes of the project closeout report? Select all that apply.
+a. Celebrate the team's success with a formal congratulations
+b. Review the project's performance in respect to budget and schedule
+c. Provide an evaluation of the quality of work
+d. Document what the team did, how they did it, and what they delivered
+
+
+a, c-----A project manager works with a stakeholder for months to open a community greenhouse. The stakeholder changes their expectations and the project timeline.
+What actions can the project manager take to resolve this issue? Select all that apply.
+a. The project manager can establish a timeline to complete this project and propose a follow-up project.
+b. The project manager avoids the stakeholder and continues with their original plan.
+c. The project manager can review the contracts with the stakeholder to include the timeline and the budget.
+d. The project manager meets with the team to determine who is not doing their job correctly.
+
+
+b, c, d-----As a project manager, which of the following should you include in the closeout report? Select all that apply.
+a. Daily project tasks, such as a breakdown in a spreadsheet
+b. Resources, such as the original project plan
+c. Open items, such as ideas for changes you'd like to make
+d. Key accomplishments, such as which objectives the team met
+
+
+b, c, d-----Which of the following tasks or roles could one use to demonstrate project management experience during a job interview? Select all that apply.
+a. Attending a formal event
+b. Organizing a big move
+c. Planning a surprise party
+d. Managing a retail store’s inventory changes

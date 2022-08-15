@@ -1,0 +1,305 @@
+a, b, c-----Which of the following are benefits of an internship? Select all that apply.
+
+a. Get short-term, hands on industry experience
+b. Network with people in your desired industry
+c. Boost your resume
+d. Get a guaranteed permanent position
+
+
+a, d-----Which of the following is a way to define a project? Select all that apply.
+
+a. A series of tasks that need to be completed to reach a desired outcome
+b. An endeavor with unlimited deliverables from stakeholders
+c. An ongoing process with no defined end date
+d. A unique, temporary pursuit that has a defined beginning and end
+
+
+b, c, d-----As a project manager impacting an organization, you want to build a great team. Which of the following would a project manager do to build a great team? Select all that apply.
+
+a. Address the team's needs whenever it's most convenient for the project manager's schedule.
+b. Take the time to understand each team member's motivations, strengths, and weaknesses.
+c. Allow the team members to have input and ask questions.
+d. Understand the customer's requirements to better shape the skills needed for the team.
+
+
+a, c, d-----Why should project managers learn about organizational culture? Select all that apply.
+a. So they can demonstrate how a project supports the company's mission and values
+b. So they can assign the right number of people to a project
+c. So they can manage change effectively
+d. So they can communicate more effectively with teams
+
+
+a, b-----Which of the following statements is true of the change management process? Select all that apply.
+a. It requires effective communication from the project manager.
+b. It includes the successful delivery and adoption of a completed project.
+c. It follows Waterfall methodology principles.
+d. It is the sole responsibility of the project manager.
+
+
+a, b-----What can a project manager do to manage changes effectively and encourage project adoption? Select all that apply.
+a. Communicate clearly by being transparent and upfront with their ideas
+b. Create a sense of ownership and urgency around the project
+c. Avoid having team members as advocates because they may be too enthusiastic about the project
+d. Encourage supervisors to use their authority to force employee adoption
+
+
+b, c-----Which questions can help project managers learn about a company's organizational culture? Select all that apply.
+a. How much revenue did the organization earn last year?
+b. How do employees prefer to communicate?
+c. Which style of project management does the company use?
+d. What day was the organization founded?
+
+
+a, b, d-----What tools can a project manager incorporate to assist in project adoption? Select all that apply.
+
+a. Feedback mechanisms, such as surveys, to capture stakeholder input
+b. Flowcharts to illustrate the project's development process
+c. Reporting charts to show the relationships among people and groups within the organization
+d. Culture mapping to illustrate how the company's values, norms, and employees behavior may be affected by the project
+
+
+a, d-----Which of the following accurately describe how organizational structure impacts project management? Select all that apply.
+a. It affects the availability of resources that can be devoted to a project.
+b. It affects the client's criteria for success.
+c. It affects the client's project satisfaction.
+d. It affects the project manager's level of authority and their ability to make decisions that impact the larger organization.
+
+
+b, c, d-----Which of the following concepts are part of organizational culture? Select all that apply.
+
+a. A company's stock price
+b. A company's mission
+c. A company's shared values
+d. A company's history
+
+
+a, b-----What questions can project managers ask themselves in order to help manage change effectively? Select all that apply.
+
+a. How will the organization react to change?
+b. What are the best means of communication to convey the change?
+c. Which leaders shouldn't be informed of the change?
+d. Which influencers in the organization can affect the change?
+
+
+a, b, c-----How can project managers navigate organizational culture while working on projects? Select all that apply.
+
+a. By making observations
+b. By asking questions
+c. By understanding their impact
+d. By creating a Project Management Office (PMO)
+
+
+a, c, d-----Which of the following are important project management responsibilities? Select all that apply.
+
+a. Managing tasks
+b. Managing company operations
+c. Planning and organizing
+d. Controlling costs
+
+
+b, c-----What does it take for a project manager to ensure a project stays on-track and on-budget? Select all that apply.
+
+a. Networking
+b. Careful planning
+c. Collaboration
+d. Technical industry experience
+
+
+b, c, d-----As someone moving to a new location, you have several tasks. You have to plan for the various expenses like boxes and movers. You also have to clearly label the boxes, and manage all of the tasks leading up to and during the move. Which project management skills does the move require? Select all that apply.
+
+a. Deep technical experience
+b. Strong planning and communication skills
+c. Organizational management
+d. Budget preparation and monitoring
+
+
+b, d, e-----Which of the following explains how a project manager best accomplishes their responsibilities? Select all that apply.
+
+a. Establishes the budget after the project begins
+b. Helps the team get what they need to keep the project going
+c. Assigns project tasks to the appropriately-skilled stakeholders
+d. Communicates key project milestones to stay on task
+e. Knows what the project team needs to accomplish and when
+
+
+a, d, e-----What required skills are typically listed in project management job postings? Select all that apply.
+
+a. Budget preparation and monitoring
+b. Web design
+c. Social media marketing
+d. Organizational management
+e. Communication skills
+
+
+a, b, d-----Which of the following are project manager responsibilities during the initiation phase? Select all that apply.
+
+a. Get project approval
+b. Determine resources needed
+c. Create a budget
+d. Define project goals
+
+
+b, c, d-----Which of the following are project manager responsibilities during the closing phase? Select all that apply.
+
+a. Complete the project proposal
+b. Reflect on lessons learned
+c. Ensure all tasks are complete
+d. Confirm acceptance of the project outcome
+
+
+a, b, d-----Which of the following are project manager responsibilities during the planning phase? Select all that apply.
+
+a. Create a budget
+b. Set the schedule
+c. Get project approval
+d. Establish the team
+
+
+a, b, d-----Which of the following are project manager responsibilities during the execution phase? Select all that apply.
+
+a. Handle communication for the team
+b. Manage the project's progress
+c. Do the majority of the work
+d. Make adjustments to the schedule, budget, and resources
+
+
+a, b, c-----Why is it important to initiate a project? Select all that apply.
+a. Determine if the project's benefits outweigh the costs
+b. Provide a strong foundation and set the stage for success
+c. Solidify the scope of a project
+d. Help the project manager establish a good reputation
+
+
+c, d-----What two questions can a project manager ask to determine a project's costs?
+a. What value will the project create?
+b. How will the user experience be improved?
+c. What are the ongoing project costs?
+d. How much time will people have to spend on the project?
+
+
+b, c, d-----A project charter adds value to projects in what three ways?
+a. Includes a plan to mitigate potential risks
+b. Sets up a framework for what project work the team needs to do
+c. Helps project managers communicate project details to others
+d. Allows project managers to get organized
+
+
+c, d-----Why is it important to perform a cost-benefit analysis during the initiation phase? Select all that apply.
+a. To set up a framework for what project work the team needs to do
+b. To add up the expected value, or benefits, of a project
+c. To outline project goals and how to accomplish them
+d. To compare the project benefits to the costs
+
+
+a, b, d-----Which of the following could be considered intangible benefits? Select all that apply.
+a. Customer satisfaction
+b. Brand perception
+c. Income earned
+d. Employee satisfaction
+
+
+a, c, d-----Consider this Office Green scenario: A member of the marketing team suggests allowing customers to choose from an additional three plant colors.
+What can help prevent project scope creep in this scenario? Select all that apply.
+a. Get clarity on project requirements.
+b. Go along with the member's suggestion.
+c. Make project plans visible.
+d. Create a plan for dealing with out-of-scope requests.
+
+
+a, c, d-----Suppose that you're starting as a project manager for a new client. What three strategies can you use to decrease the likelihood of scope creep and make the project a success?
+
+a. Set ground rules and expectations for client involvement once the project begins.
+b. Keep complicated documents from the client because you don't want to confuse them.
+c. Ask for constructive criticism on the initial product proposal.
+d. Show the client the details of what you're going to create and how much it will cost.
+
+
+b, c, d-----The objective for a car company is to launch a new series of cars. Which three of the following could be examples of key results?
+
+a. Create a best-in-class midsize sedan.
+b. Improve the customer satisfaction survey score by 15%.
+c. Distribute 98% of the product on time to dealerships.
+d. Meet production deadlines 95% of the time.
+
+
+b, c-----Which of the following demonstrates a project manager keeping the project in scope? Select all that apply.
+
+a. The key stakeholder has had to meet with the project manager several times to define the project scope. The project manager is delaying meetings and is unclear about project tasks.
+b. The key stakeholder meets with the project manager to set the scope and deliverable agreements in writing. The project manager keeps the key stakeholder informed while communicating with project team members.
+c. The key stakeholder and the project manager clearly define the project scope in the initial planning stage. The project manager documents all the details to be referred to throughout the project life cycle.
+d. The key stakeholder clearly states the project needs to be completed in six months and must stay within scope. The project manager has not been able to keep the project on schedule and has yet to inform the key stakeholder of the delay.
+
+
+c, d-----Which two of the following are examples of success criteria?
+
+a. Create a new product feature that will satisfy customers.
+b. Implement a training service to meet company objectives.
+c. Deliver training to all appropriate teams to ensure at least 98% of the teams are using the new tool.
+d. Meet company-wide objective of $50M in revenues.
+
+
+b, c-----Which of the following demonstrates a project manager keeping the project in scope? Select all that apply.
+
+a. The key stakeholder has had to meet with the project manager several times to define the project scope. The project manager is delaying meetings and is unclear about project tasks.
+b. The key stakeholder and the project manager clearly define the project scope in the initial planning stage. The project manager documents all the details to be referred to throughout the project life cycle.
+c. The key stakeholder meets with the project manager to set the scope and deliverable agreements in writing. The project manager keeps the key stakeholder informed while communicating with project team members.
+d. The key stakeholder clearly states the project needs to be completed in six months and must stay within scope. The project manager has not been able to keep the project on schedule and has yet to inform the key stakeholder of the delay.
+
+
+a, b, c-----Which of the following responsibilities typically belong to the project manager? Select all that apply.
+a. Control change and monitor project quality
+b. Develop the project management plan
+c. Direct project work and report on progress to stakeholders
+d. Sign off on the budget
+
+
+a, b, c-----Which of the following are typical responsibilities of project team members? Select all that apply.
+a. Take on multiple project tasks
+b. Carry out day-to-day project tasks
+c. Provide technical expertise
+d. Initiate the project
+
+
+a, d-----Which of the following statements are true of RACI charts? Select all that apply.
+
+a. Define project roles and responsibilities to ensure efficiency
+b. Record the level of risk stakeholders bring to the project
+c. Assess each stakeholder's ability to participate and build necessary partnerships
+d. Determine which stakeholders are responsible for which tasks
+
+
+a, b, d-----Which of the following people are likely to be primary stakeholders in a project? Select all that apply.
+a. The project client
+b. The project team
+c. Business competitors
+d. The project sponsor
+
+
+a, b, d-----How does stakeholder analysis benefit a project? Select all that apply.
+a. Gets the right people involved at the right time
+b. Builds partnerships necessary for project success
+c. Lowers project costs
+d. Helps the project team avoid surprises
+
+
+a, b, c-----Which three of the following responsibilities can belong to the project sponsor?
+
+a. Play a key leadership role throughout the project.
+b. Ensure that the project delivers the agreed upon value to the business.
+c. Fund the project.
+d. Plan and organize the project.
+
+
+b, d-----Which stakeholders benefit directly (not indirectly) from a project's success? Select all that apply.
+a. Secondary stakeholders
+b. Key players
+c. Minor players
+d. Primary stakeholders
+
+
+a, b, d-----Which three of the following situations can lead to role confusion on a project?
+
+a. When workloads are unbalanced
+b. When team members perform overlapping work
+c. When only one person is designated as accountable
+d. When ownership of decisions is unclear
