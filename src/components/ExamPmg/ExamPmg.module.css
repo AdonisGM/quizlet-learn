@@ -175,6 +175,10 @@
   white-space: pre-line;
 }
 
+.bodyQuestionContent > div {
+  width: 65%;
+}
+
 .footer {
   padding: 12px;
 }

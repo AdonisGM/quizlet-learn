@@ -187,8 +187,9 @@ const ExamPmg = () => {
           <Progress
             size={'xs'}
             value={
-              (listQuestion.filter((item) => item.choose.join('') === item.answer.join(''))
-                .length /
+              (listQuestion.filter(
+                (item) => item.choose.join('') === item.answer.join('')
+              ).length /
                 listQuestion.length) *
               100
             }
@@ -303,7 +304,9 @@ const ExamPmg = () => {
                 </strong>
               </div>
               <div className={classes.bodyQuestionContent}>
-                {listQuestion[indexQuestion].question}
+                <div>(Choose {listQuestion[indexQuestion].answer.length} answer)</div>
+                <br/>
+                <div>{listQuestion[indexQuestion].question}</div>
               </div>
             </div>
           </div>
