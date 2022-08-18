@@ -42,18 +42,18 @@ const extractAnswer = (text) => {
   const result = text
     .split('\n')
     .filter((item) => {
-      return item.slice(0, 5).match(/[AaBbCcDdEeFfGgHh]\. /g);
+      return item.slice(0, 5).match(/^[AaBbCcDdEeFfGgHh]\. /g);
     })
     .map((item) => {
       let a;
-      if (item.slice(0, 5).match(/[Aa]{1}\. /g)) a = 'A';
-      if (item.slice(0, 5).match(/[Bb]{1}\. /g)) a = 'B';
-      if (item.slice(0, 5).match(/[Cc]{1}\. /g)) a = 'C';
-      if (item.slice(0, 5).match(/[Dd]{1}\. /g)) a = 'D';
-      if (item.slice(0, 5).match(/[Ee]{1}\. /g)) a = 'E';
-      if (item.slice(0, 5).match(/[Ff]{1}\. /g)) a = 'F';
-      if (item.slice(0, 5).match(/[Gg]{1}\. /g)) a = 'G';
-      if (item.slice(0, 5).match(/[Hh]{1}\. /g)) a = 'H';
+      if (item.slice(0, 5).match(/^[Aa]{1}\. /g)) a = 'A';
+      if (item.slice(0, 5).match(/^[Bb]{1}\. /g)) a = 'B';
+      if (item.slice(0, 5).match(/^[Cc]{1}\. /g)) a = 'C';
+      if (item.slice(0, 5).match(/^[Dd]{1}\. /g)) a = 'D';
+      if (item.slice(0, 5).match(/^[Ee]{1}\. /g)) a = 'E';
+      if (item.slice(0, 5).match(/^[Ff]{1}\. /g)) a = 'F';
+      if (item.slice(0, 5).match(/^[Gg]{1}\. /g)) a = 'G';
+      if (item.slice(0, 5).match(/^[Hh]{1}\. /g)) a = 'H';
       return {
         key: a,
         value: item,
