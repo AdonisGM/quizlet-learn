@@ -49,10 +49,10 @@ const Create = () => {
           learned: false,
         };
       });
-      if (isSplit && listObject.length > 100) {
+      if (isSplit && listObject.length > 50) {
         let a = 0;
-        for (let i = 0; i < listObject.length; i += 100) {
-          const t = listObject.slice(i, i + 100);
+        for (let i = 0; i < listObject.length; i += 50) {
+          const t = listObject.slice(i, i + 50);
           localStorage.setItem(
             nanoid(15),
             JSON.stringify({
@@ -132,7 +132,7 @@ const Create = () => {
           <Card.Divider />
           <Spacer />
           <div className={classes.butonSwitch}>
-            <Text css={{ margin: 0 }}>Divided into 100 per course</Text>
+            <Text css={{ margin: 0 }}>Divided into 50 per course</Text>
             <Switch
               checked={isSplit}
               shadow
