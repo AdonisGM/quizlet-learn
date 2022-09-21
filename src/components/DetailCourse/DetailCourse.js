@@ -102,7 +102,7 @@ const DetailCourse = () => {
       localStorage.setItem(id, JSON.stringify(temp1));
     }
 
-    if (temp1.name.includes('pmg')) {
+    if (temp1.name.includes('multiple')) {
       navigate(`/learn/pmg/${id}`);
     } else {
       navigate(`/learn/${id}`);
