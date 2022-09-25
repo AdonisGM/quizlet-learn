@@ -8,6 +8,7 @@ import LearnScreen from './screens/LearnScreen';
 import ExamScreen from './screens/ExamScreen';
 import LearnPmgScreen from './screens/LearnPmgScreen';
 import ExamScreenPmg from './screens/ExamPmgScreen';
+import MessageScreen from './screens/MessageScreen';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path={'/learn/pmg/:id'} element={<LearnPmgScreen title={'Learn PMG course | AdonisGM'}/>} />
       </Route>
       <Route path={'/course/:id/exam'} element={<ExamScreen title={'Exam Pmg Screen | AdonisGM'}/>} />
+      <Route path={'/message'} element={<MessageScreen title={'Message | AdonisGM'}/>} />
       <Route path={'/course/pmg/:id/exam'} element={<ExamScreenPmg title={'Exam Pmg Screen | AdonisGM'}/>} />
       <Route path={'*'} element={<NotFoundScreen title={'Not found | AdonisGM'}/>} />
     </Routes>
