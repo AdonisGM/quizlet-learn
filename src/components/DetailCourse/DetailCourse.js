@@ -182,7 +182,7 @@ const DetailCourse = () => {
                     break;
                   case 'Exam':
                     const u = JSON.parse(localStorage.getItem(id));
-                    if (u.name.includes('pmg')) {
+                    if (u.name.includes('multiple')) {
                       navigate('/course/pmg/' + id + '/exam');
                     } else {
                       navigate('/course/' + id + '/exam');

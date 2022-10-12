@@ -9,7 +9,9 @@ import {
   Tooltip,
   Progress,
   Table,
+  Spacer,
 } from '@nextui-org/react';
+import { TiWarning } from 'react-icons/ti';
 
 const dummyTable = [
   ['Machine', 'DESKTOP-......'],
@@ -44,6 +46,8 @@ const ExamPmg = () => {
   const [listQuestion, setListQuestion] = useState(getRamdom30(id));
   const [indexQuestion, setIndexQuestion] = useState(0);
   const [enableSubmit, setEnableSubmit] = useState(false);
+  const [showWarning, setShowWarning] = useState(true);
+  const [countDown, setCountDown] = useState(60);
 
   const [showModal, setShowModal] = useState(false);
 
@@ -73,6 +77,19 @@ const ExamPmg = () => {
       }
     };
   }, []);
+
+  useEffect(() => {
+    if (countDown === 0) {
+      setShowWarning(false);
+      return;
+    }
+
+    const timer = setTimeout(() => {
+      setCountDown(countDown - 1);
+      setShowWarning(true);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, [countDown]);
 
   const handleAnswer = (value) => {
     let cloneArray = [...listQuestion[indexQuestion].choose];
@@ -111,6 +128,31 @@ const ExamPmg = () => {
 
   return (
     <Fragment>
+      {showWarning && <div className={classes.popup}>
+      <Text p b css={{ color: '#ff5100' }}>
+          <TiWarning color="ff5100" />
+          Cảnh báo:
+        </Text>
+        <Spacer y={0.3} />
+        <Text p size={12}>
+          Đây là một trang web được thiết kế để tập trung vào việc học tập và
+          làm quen với giao diện phần mềm EOS của trường <b>"Đại học FPT"</b>.
+        </Text>
+        <Spacer y={0.3} />
+        <Text p size={12}>
+          Nếu sử dụng trang web sai mục đích, vi phạm quy định của nhà trường, tôi
+          sẽ không chịu trách nhiệm về bất kỳ hành vi nào của bạn.
+        </Text>
+        <Spacer y={0.3} />
+        <Text p size={12}>
+          Nếu bạn không đồng ý với điều khoản trên, vui lòng thoát khỏi trang web
+          ngay lập tức.
+        </Text>
+        <Spacer y={0.6} />
+        <Text p i size={12}>
+          Cảnh báo sẽ tự đóng sau <b>{countDown} giây</b>.
+        </Text>
+      </div>}
       <Modal
         closeButton
         aria-labelledby="modal-title"
