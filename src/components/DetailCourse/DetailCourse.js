@@ -23,6 +23,7 @@ import {
   FcFullTrash,
   FcExport,
 } from 'react-icons/fc';
+import { FcApproval, FcCancel } from 'react-icons/fc';
 
 function toLowerCaseNonAccentVietnamese(str) {
   str = str.toLowerCase();
@@ -48,6 +49,8 @@ const DetailCourse = () => {
   const [selectQuestion, setSelectQuestion] = useState(undefined);
   const [showModalExport, setShowModalExport] = useState(false);
   const [contentExport, setContentExport] = useState('');
+  const [isConnecting, setIsConnecting] = useState(true);
+  const [isFailedConnect, setIsFailedConnect] = useState(false);
 
   const { id } = useParams();
   const navigate = useNavigate();
@@ -63,6 +66,17 @@ const DetailCourse = () => {
     setInfoCourse(JSON.parse(course1));
     setCourse(JSON.parse(course1).data);
     setCourseSearch(JSON.parse(course1).data);
+
+    fetch('https://short-link-adonisgm.azurewebsites.net/api/quizlet/register')
+      .then(() => {
+        setIsConnecting(false);
+        setIsFailedConnect(false);
+      })
+      .catch((err) => {
+        console.log(err);
+        setIsConnecting(false);
+        setIsFailedConnect(true);
+      });
   }, []);
 
   useEffect(() => {
@@ -122,6 +136,25 @@ const DetailCourse = () => {
 
   return (
     <div>
+      <Card
+        css={{
+          padding: '1rem',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          width: '50px',
+          height: '50px',
+
+          position: 'fixed',
+          bottom: '1rem',
+          left: '1rem',
+        }}
+      >
+        {isConnecting && <Loading size="xs" type="gradient" />}
+        {!isConnecting && isFailedConnect && <FcCancel size="2rem" />}
+        {!isConnecting && !isFailedConnect && <FcApproval size="2rem" />}
+      </Card>
       <Modal
         closeButton
         blur
@@ -130,13 +163,17 @@ const DetailCourse = () => {
         onClose={() => {
           setShowModalExport(false);
         }}
-        width={'40%'}        
+        width={'40%'}
       >
         <Modal.Body>
-          <Textarea rows={30} value={contentExport} contentEditable={false}/>
-          <Button onPress={() => {
-            navigator.clipboard.writeText(contentExport)
-          }}>Copy to clipboard</Button>
+          <Textarea rows={30} value={contentExport} contentEditable={false} />
+          <Button
+            onPress={() => {
+              navigator.clipboard.writeText(contentExport);
+            }}
+          >
+            Copy to clipboard
+          </Button>
         </Modal.Body>
       </Modal>
       <Modal
