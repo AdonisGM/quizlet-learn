@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from 'react';
+import { Fragment, useEffect, useRef, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import {
   Text,
@@ -51,9 +51,12 @@ const DetailCourse = () => {
   const [contentExport, setContentExport] = useState('');
   const [isConnecting, setIsConnecting] = useState(true);
   const [isFailedConnect, setIsFailedConnect] = useState(false);
+  const [showEnterQuantityQuestion, setShowEnterQuantityQuestion] =
+    useState(false);
 
   const { id } = useParams();
   const navigate = useNavigate();
+  const quantityRef = useRef();
 
   const handleSearchChange = (e) => {
     setSearch(e.target.value);
@@ -134,6 +137,32 @@ const DetailCourse = () => {
     setShowModalExport(true);
   };
 
+  const handleSubmitExam = () => {
+    const quantity = quantityRef.current.value;
+
+    // check valid quantity string from user input by regex
+    const regex = /^[0-9]*$/;
+    if (regex.test(quantity)) {
+      const number = Number.parseInt(quantity);
+      if (number > 0 && number <= 100) {
+        const temp1 = JSON.parse(localStorage.getItem(id));
+        if (temp1.name.includes('multiple')) {
+          navigate('/course/pmg/' + id + '/exam', {
+            state: {
+              quantity: number,
+            },
+          });
+        } else {
+          navigate('/course/' + id + '/exam', {
+            state: {
+              quantity: number,
+            },
+          });
+        }
+      }
+    }
+  };
+
   return (
     <div>
       <Card
@@ -155,6 +184,54 @@ const DetailCourse = () => {
         {!isConnecting && isFailedConnect && <FcCancel size="2rem" />}
         {!isConnecting && !isFailedConnect && <FcApproval size="2rem" />}
       </Card>
+      <Modal
+        closeButton
+        blur
+        aria-labelledby="modal-titlea"
+        open={showEnterQuantityQuestion}
+        onClose={() => {
+          setShowEnterQuantityQuestion(false);
+        }}
+        width={'300px'}
+      >
+        <Modal.Header>
+          <Text p b size={14}>
+            Enter quantity question
+          </Text>
+        </Modal.Header>
+        <Modal.Body>
+          <Text
+            p
+            i
+            size={12}
+            color={'red'}
+            css={{
+              margin: '0 auto',
+            }}
+          >
+            Only accept number from 1 to 100
+          </Text>
+          <Input
+            width={'auto'}
+            labelLeft={'Quantity'}
+            clearable
+            ref={quantityRef}
+          />
+          <Button
+            onPress={() => {
+              handleSubmitExam();
+            }}
+            auto="true"
+            css={{
+              width: '100px',
+              margin: '0 auto',
+            }}
+            color="success"
+          >
+            Start exam
+          </Button>
+        </Modal.Body>
+      </Modal>
       <Modal
         closeButton
         blur
@@ -218,12 +295,7 @@ const DetailCourse = () => {
                     handleButtonLearnPress();
                     break;
                   case 'Exam':
-                    const u = JSON.parse(localStorage.getItem(id));
-                    if (u.name.includes('multiple')) {
-                      navigate('/course/pmg/' + id + '/exam');
-                    } else {
-                      navigate('/course/' + id + '/exam');
-                    }
+                    setShowEnterQuantityQuestion(true);
                     break;
                   case 'Delete':
                     handleDelete();

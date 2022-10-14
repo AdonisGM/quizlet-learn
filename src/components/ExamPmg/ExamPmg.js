@@ -1,7 +1,7 @@
 import { Fragment, useEffect, useState } from 'react';
 import classes from './ExamPmg.module.css';
 import flagExam from '../../images/flag-exam.png';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, useLocation } from 'react-router-dom';
 import {
   Modal,
   Button,
@@ -28,7 +28,7 @@ const generateAnswer = (answer) => {
   return ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
 };
 
-const getRamdom30 = (id) => {
+const getRamdom = (id, quantity) => {
   const arrayQuestion = JSON.parse(localStorage.getItem(id)).data.map(
     (item) => {
       item.answer = item.answer.trim().toUpperCase().split(', ');
@@ -36,20 +36,37 @@ const getRamdom30 = (id) => {
       return item;
     }
   );
-  return arrayQuestion.sort(() => Math.random() - 0.5).slice(0, 30);
+  return arrayQuestion
+    .sort(() => Math.random() - 0.5)
+    .slice(0, quantity ? quantity : 30);
 };
 
 const ExamPmg = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const location = useLocation();
 
-  const [listQuestion, setListQuestion] = useState(getRamdom30(id));
+  const [listQuestion, setListQuestion] = useState(
+    getRamdom(id, location.state.quantity)
+  );
   const [indexQuestion, setIndexQuestion] = useState(0);
   const [enableSubmit, setEnableSubmit] = useState(false);
   const [showWarning, setShowWarning] = useState(true);
   const [countDown, setCountDown] = useState(60);
+  const [time, setTime] = useState(60 * location.state.quantity);
 
   const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    const a = setTimeout(() => {
+      if (time > 0) {
+        setTime(time - 1);
+      } else {
+        setShowModal(true);
+      }
+    }, 1000);
+    return () => clearTimeout(a);
+  }, [time]);
 
   useEffect(() => {
     const elem = document.documentElement;
@@ -126,33 +143,44 @@ const ExamPmg = () => {
     }, 250);
   };
 
+  let munites = Math.floor(time / 60);
+  if (munites < 10) {
+    munites = '0' + munites;
+  }
+  let seconds = time % 60;
+  if (seconds < 10) {
+    seconds = '0' + seconds;
+  }
+
   return (
     <Fragment>
-      {showWarning && <div className={classes.popup}>
-      <Text p b css={{ color: '#ff5100' }}>
-          <TiWarning color="ff5100" />
-          Cảnh báo:
-        </Text>
-        <Spacer y={0.3} />
-        <Text p size={12}>
-          Đây là một trang web được thiết kế để tập trung vào việc học tập và
-          làm quen với giao diện phần mềm EOS của trường <b>"Đại học FPT"</b>.
-        </Text>
-        <Spacer y={0.3} />
-        <Text p size={12}>
-          Nếu sử dụng trang web sai mục đích, vi phạm quy định của nhà trường, tôi
-          sẽ không chịu trách nhiệm về bất kỳ hành vi nào của bạn.
-        </Text>
-        <Spacer y={0.3} />
-        <Text p size={12}>
-          Nếu bạn không đồng ý với điều khoản trên, vui lòng thoát khỏi trang web
-          ngay lập tức.
-        </Text>
-        <Spacer y={0.6} />
-        <Text p i size={12}>
-          Cảnh báo sẽ tự đóng sau <b>{countDown} giây</b>.
-        </Text>
-      </div>}
+      {showWarning && (
+        <div className={classes.popup}>
+          <Text p b css={{ color: '#ff5100' }}>
+            <TiWarning color="ff5100" />
+            Cảnh báo:
+          </Text>
+          <Spacer y={0.3} />
+          <Text p size={12}>
+            Đây là một trang web được thiết kế để tập trung vào việc học tập và
+            làm quen với giao diện phần mềm EOS của trường <b>"Đại học FPT"</b>.
+          </Text>
+          <Spacer y={0.3} />
+          <Text p size={12}>
+            Nếu sử dụng trang web sai mục đích, vi phạm quy định của nhà trường,
+            tôi sẽ không chịu trách nhiệm về bất kỳ hành vi nào của bạn.
+          </Text>
+          <Spacer y={0.3} />
+          <Text p size={12}>
+            Nếu bạn không đồng ý với điều khoản trên, vui lòng thoát khỏi trang
+            web ngay lập tức.
+          </Text>
+          <Spacer y={0.6} />
+          <Text p i size={12}>
+            Cảnh báo sẽ tự đóng sau <b>{countDown} giây</b>.
+          </Text>
+        </div>
+      )}
       <Modal
         closeButton
         aria-labelledby="modal-title"
@@ -295,7 +323,9 @@ const ExamPmg = () => {
           </div>
           <div className={classes.headerTimeFlag}>
             <img width={160} src={flagExam} />
-            <div>30:00</div>
+            <div>
+              {munites}:{seconds}
+            </div>
           </div>
         </div>
         <div className={classes.tempBody}>
@@ -346,8 +376,10 @@ const ExamPmg = () => {
                 </strong>
               </div>
               <div className={classes.bodyQuestionContent}>
-                <div>(Choose {listQuestion[indexQuestion].answer.length} answer)</div>
-                <br/>
+                <div>
+                  (Choose {listQuestion[indexQuestion].answer.length} answer)
+                </div>
+                <br />
                 <div>{listQuestion[indexQuestion].question}</div>
               </div>
             </div>
