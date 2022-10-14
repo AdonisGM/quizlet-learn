@@ -17,6 +17,8 @@ import {
 import classes from './DetailCourse.module.css';
 import { RiEyeLine } from 'react-icons/ri';
 import { MdKeyboardBackspace } from 'react-icons/md';
+import { FcEnteringHeavenAlive } from 'react-icons/fc';
+import { FcSynchronize } from 'react-icons/fc';
 import {
   FcGraduationCap,
   FcReading,
@@ -53,6 +55,9 @@ const DetailCourse = () => {
   const [isFailedConnect, setIsFailedConnect] = useState(false);
   const [showEnterQuantityQuestion, setShowEnterQuantityQuestion] =
     useState(false);
+  const [showUpload, setShowUpload] = useState(false);
+  const [isSuccessUpload, setIsSuccessUpload] = useState(undefined);
+  const [codeShare, setCodeShare] = useState(undefined);
 
   const { id } = useParams();
   const navigate = useNavigate();
@@ -63,7 +68,7 @@ const DetailCourse = () => {
     setSearching(true);
   };
 
-  useEffect(() => {
+  const getData = () => {
     const course1 = localStorage.getItem(id);
 
     setInfoCourse(JSON.parse(course1));
@@ -80,6 +85,10 @@ const DetailCourse = () => {
         setIsConnecting(false);
         setIsFailedConnect(true);
       });
+  }
+
+  useEffect(() => {
+    getData();
   }, []);
 
   useEffect(() => {
@@ -137,6 +146,45 @@ const DetailCourse = () => {
     setShowModalExport(true);
   };
 
+  const handleReset = () => {
+    const temp1 = JSON.parse(localStorage.getItem(id));
+    const data = temp1.data;
+
+    data.forEach((item) => {
+      item.learned = false;
+    });
+    temp1.data = data;
+
+    localStorage.setItem(id, JSON.stringify(temp1));
+    getData();
+  };
+
+  const handleUpload = () => {
+    const data = localStorage.getItem(id);
+    const body = {
+      data,
+    };
+
+    setShowUpload(true);
+    setIsSuccessUpload(undefined);
+    setCodeShare(undefined);
+    fetch('https://short-link-adonisgm.azurewebsites.net/api/quizlet/upload', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setCodeShare(data.code);
+        setIsSuccessUpload(true);
+      })
+      .catch((err) => {
+        setIsSuccessUpload(false);
+      });
+  };
+
   const handleSubmitExam = () => {
     const quantity = quantityRef.current.value;
 
@@ -184,6 +232,88 @@ const DetailCourse = () => {
         {!isConnecting && isFailedConnect && <FcCancel size="2rem" />}
         {!isConnecting && !isFailedConnect && <FcApproval size="2rem" />}
       </Card>
+      <Modal
+        closeButton
+        blur
+        aria-labelledby="modal-titlea"
+        open={showUpload}
+        onClose={() => {
+          setShowUpload(false);
+        }}
+        width={'500px'}
+      >
+        <Modal.Header>
+          <Text p b size={14}>
+            Upload to server
+          </Text>
+        </Modal.Header>
+        <Modal.Body>
+          {codeShare === undefined && isSuccessUpload === undefined && (
+            <Loading
+              size="md"
+              type="gradient"
+              style={{
+                margin: '30px 0',
+              }}
+            />
+          )}
+          {codeShare === undefined && isSuccessUpload === false && (
+            <Text
+              p
+              b
+              size={14}
+              style={{
+                margin: '30px 0',
+              }}
+              color="red"
+            >
+              Upload failed, please try again later or contact me at Github
+            </Text>
+          )}
+          {codeShare !== undefined && (
+            <Fragment>
+              <Text
+                p
+                i
+                size={12}
+                css={{
+                  margin: '0 auto',
+                  textAlign: 'center',
+                }}
+              >
+                Copy code to share with your friends, <br />
+                All learning progress will be saved on server
+              </Text>
+              <div
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  backgroundColor: '#f5f5f5',
+                  marginTop: '1rem',
+                  padding: '1rem',
+                  borderRadius: '15px',
+                }}
+              >
+                {codeShare}
+              </div>
+              <Button
+                onPress={() => {
+                  navigator.clipboard.writeText(codeShare);
+                }}
+                auto="true"
+                css={{
+                  width: '100px',
+                  margin: '0 auto',
+                }}
+                color="success"
+              >
+                Copy code
+              </Button>
+            </Fragment>
+          )}
+        </Modal.Body>
+      </Modal>
       <Modal
         closeButton
         blur
@@ -300,8 +430,15 @@ const DetailCourse = () => {
                   case 'Delete':
                     handleDelete();
                     break;
+                  case 'Upload':
+                    handleUpload();
+                    break;
                   case 'Export':
                     handleExport();
+                    break;
+                  case 'Reset':
+                    handleReset();
+                    break;
                   default:
                     break;
                 }
@@ -325,6 +462,14 @@ const DetailCourse = () => {
                   Take exam
                 </Dropdown.Item>
                 <Dropdown.Item
+                  key="Upload"
+                  description="Upload course to server ☁️"
+                  color="primary"
+                  icon={<FcEnteringHeavenAlive size={20} />}
+                >
+                  Upload to server
+                </Dropdown.Item>
+                <Dropdown.Item
                   key="Export"
                   description="Export course to text for Quizlet"
                   color="secondary"
@@ -341,6 +486,14 @@ const DetailCourse = () => {
                   icon={<FcFullTrash size={20} />}
                 >
                   Delete
+                </Dropdown.Item>
+                <Dropdown.Item
+                  key="Reset"
+                  description="Reset course, can't be undone"
+                  color="error"
+                  icon={<FcSynchronize size={20} />}
+                >
+                  Reset progress
                 </Dropdown.Item>
               </Dropdown.Section>
             </Dropdown.Menu>
