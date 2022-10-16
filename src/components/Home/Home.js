@@ -6,17 +6,21 @@ import {
   Button,
   Modal,
   Input,
+  Dropdown,
 } from '@nextui-org/react';
 import { useEffect, useState, useRef, Fragment } from 'react';
 import { useNavigate } from 'react-router-dom';
 import classes from './Home.module.css';
 import { nanoid } from 'nanoid';
+import CrawlData from '../CrawlData/CrawlData';
+import { FcDownload, FcFile, FcMultipleInputs } from 'react-icons/fc';
 
 const Home = () => {
   const [listCourse, setListCourse] = useState([]);
   const [showImport, setShowImport] = useState(false);
   const [isGettingData, setIsGettingData] = useState(false);
   const [isFailed, setIsFailed] = useState(false);
+  const [showModalCrawl, setShowModalCrawl] = useState(false);
 
   const codeRef = useRef();
   const navigate = useNavigate();
@@ -76,6 +80,10 @@ const Home = () => {
 
   return (
     <div>
+      <CrawlData open={showModalCrawl} setClose={setShowModalCrawl} onSuccess={() => {
+        setShowModalCrawl(false);
+        getData();
+      }}/>
       <Modal
         open={showImport}
         blur
@@ -123,20 +131,61 @@ const Home = () => {
             columnGap: '1rem',
           }}
         >
-          <Button flat auto onPress={handleCreate}>
-            Create from Quizlet
-          </Button>
-          <Button
-            flat
-            auto
-            color={'gradient'}
-            onPress={() => {
-              setShowImport(true);
-              setIsFailed(false);
-            }}
-          >
-            Import by share code
-          </Button>
+          <Dropdown disableAnimation>
+            <Dropdown.Button flat color="secondary">
+              Create new course
+            </Dropdown.Button>
+            <Dropdown.Menu
+              color="secondary"
+              aria-label="Actions"
+              css={{ $$dropdownMenuWidth: '280px' }}
+              onAction={(e) => {
+                switch (e) {
+                  case 'quizlet':
+                    handleCreate();
+                    break;
+                  case 'import':
+                    setShowImport(true);
+                    setIsFailed(false);
+                    break;
+                  case 'crawl':
+                    setShowModalCrawl(true);
+                    break;
+                  default:
+                    break;
+                }
+              }}
+            >
+              <Dropdown.Section title="Automatic">
+                <Dropdown.Item
+                  key="crawl"
+                  description="Crawl data from Quizlet"
+                  color="success"
+                  icon={<FcMultipleInputs />}
+                >
+                  Crawl data <b>{'(recommended)'}</b>
+                </Dropdown.Item>
+              </Dropdown.Section>
+              <Dropdown.Section title="Manual">
+                <Dropdown.Item
+                  key="quizlet"
+                  description="Create new course by export Quizlet"
+                  color="primary"
+                  icon={<FcFile />}
+                >
+                  Quizlet
+                </Dropdown.Item>
+                <Dropdown.Item
+                  key="import"
+                  description="Import course by share code"
+                  color="warning"
+                  icon={<FcDownload />}
+                >
+                  Import code
+                </Dropdown.Item>
+              </Dropdown.Section>
+            </Dropdown.Menu>
+          </Dropdown>
         </div>
       </div>
       <Spacer y={1.4} />
