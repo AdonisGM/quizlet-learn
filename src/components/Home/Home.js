@@ -283,8 +283,8 @@ const Home = () => {
                   (
                     item.data.data.filter((item) => {
                       return item.learned;
-                    }).length / item.data.data.length
-                  ).toFixed(2) * 100;
+                    }).length * 100 / item.data.data.length
+                  ).toFixed(2);
                 return (
                   <Table.Row key={item.id}>
                     <Table.Cell>{item.id}</Table.Cell>
