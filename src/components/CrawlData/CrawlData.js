@@ -1,4 +1,4 @@
-import { Modal, Text, Spacer, Button, Input } from '@nextui-org/react';
+import { Modal, Text, Spacer, Button, Input, Loading } from '@nextui-org/react';
 import { useState, Fragment, useRef } from 'react';
 import { nanoid } from 'nanoid';
 
@@ -38,6 +38,7 @@ const CrawlData = ({ open, setClose, onSuccess }) => {
         };
         localStorage.setItem(nanoid(15), JSON.stringify(course));
         onSuccess();
+        setIsGettingData(false);        
       })
       .catch(() => {
         setIsFailed(true);
@@ -75,6 +76,7 @@ const CrawlData = ({ open, setClose, onSuccess }) => {
             auto
             css={{
               margin: '0 auto',
+              width: '150px',
             }}
             onClick={() => {
               handleCrawl();
@@ -82,7 +84,7 @@ const CrawlData = ({ open, setClose, onSuccess }) => {
             disabled={isGettingData}
             color={isFailed ? 'error' : 'primary'}
           >
-            Import
+            {isGettingData ? <Loading color={'secondary'} size={'sm'}/> : 'Crawl data'}
           </Button>
         </Fragment>
       </Modal.Body>

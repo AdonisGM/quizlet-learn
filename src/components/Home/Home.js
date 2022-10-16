@@ -7,13 +7,22 @@ import {
   Modal,
   Input,
   Dropdown,
+  Table,
+  Tooltip,
+  Progress,
 } from '@nextui-org/react';
 import { useEffect, useState, useRef, Fragment } from 'react';
 import { useNavigate } from 'react-router-dom';
 import classes from './Home.module.css';
 import { nanoid } from 'nanoid';
 import CrawlData from '../CrawlData/CrawlData';
-import { FcDownload, FcFile, FcMultipleInputs } from 'react-icons/fc';
+import {
+  FcDeleteDatabase,
+  FcDownload,
+  FcFile,
+  FcMultipleInputs,
+} from 'react-icons/fc';
+import { HiOutlineEye } from 'react-icons/hi';
 
 const Home = () => {
   const [listCourse, setListCourse] = useState([]);
@@ -21,6 +30,8 @@ const Home = () => {
   const [isGettingData, setIsGettingData] = useState(false);
   const [isFailed, setIsFailed] = useState(false);
   const [showModalCrawl, setShowModalCrawl] = useState(false);
+  const [selection, setSelection] = useState([]);
+  const [isDeleteMode, setIsDeleteMode] = useState(false);
 
   const codeRef = useRef();
   const navigate = useNavigate();
@@ -44,6 +55,28 @@ const Home = () => {
   const handleCreate = () => {
     navigate('/create');
   };
+
+  const handleChangeSelect = (e) => {
+    console.log(e);
+    setSelection([...e]);
+  };
+
+  const handleDelete = () => {
+    console.log(selection);
+    selection.forEach((item) => {
+      localStorage.removeItem(item);
+    });
+    getData();
+    setSelection([]);
+    setIsDeleteMode(false);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      getData();
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
 
   const handleImport = () => {
     const code = codeRef.current.value.trim();
@@ -80,10 +113,14 @@ const Home = () => {
 
   return (
     <div>
-      <CrawlData open={showModalCrawl} setClose={setShowModalCrawl} onSuccess={() => {
-        setShowModalCrawl(false);
-        getData();
-      }}/>
+      <CrawlData
+        open={showModalCrawl}
+        setClose={setShowModalCrawl}
+        onSuccess={() => {
+          setShowModalCrawl(false);
+          getData();
+        }}
+      />
       <Modal
         open={showImport}
         blur
@@ -133,7 +170,7 @@ const Home = () => {
         >
           <Dropdown disableAnimation>
             <Dropdown.Button flat color="secondary">
-              Create new course
+              Menu
             </Dropdown.Button>
             <Dropdown.Menu
               color="secondary"
@@ -151,6 +188,9 @@ const Home = () => {
                   case 'crawl':
                     setShowModalCrawl(true);
                     break;
+                  case 'delete':
+                    setIsDeleteMode(!isDeleteMode);
+                    setSelection([]);
                   default:
                     break;
                 }
@@ -184,41 +224,154 @@ const Home = () => {
                   Import code
                 </Dropdown.Item>
               </Dropdown.Section>
+              <Dropdown.Section title="Danger">
+                <Dropdown.Item
+                  key="delete"
+                  description="Delete selected course"
+                  color="error"
+                  icon={<FcDeleteDatabase />}
+                >
+                  {isDeleteMode ? 'Cancel delete mode' : 'Delete mode'}
+                </Dropdown.Item>
+              </Dropdown.Section>
             </Dropdown.Menu>
           </Dropdown>
         </div>
       </div>
       <Spacer y={1.4} />
-      <Text h2>List courses:</Text>
+      <Text
+        p
+        b
+        size={16}
+        css={{
+          width: '100%',
+          textAlign: 'center',
+        }}
+      >
+        List courses
+      </Text>
       <Spacer />
-      <Grid.Container gap={3}>
-        {listCourse.length > 0 &&
-          listCourse.map((item) => (
-            <Grid xs={4} key={item.id}>
-              <Card css={{ cursor: 'pointer' }}>
-                <Card.Body
-                  onClick={() => {
-                    navigate(`/course/${item.id}`);
-                  }}
-                >
-                  <Text size={10}>
-                    Id: <strong>{item.id}</strong>
-                  </Text>
-                  <Spacer y={1} />
-                  <Text>
-                    Name: <strong>{item.data.name}</strong>
-                  </Text>
-                  <Text>
-                    Create at:{' '}
-                    <strong>
+      {listCourse.length > 0 && (
+        <Table
+          selectionMode={isDeleteMode ? 'multiple' : 'none'}
+          onSelectionChange={handleChangeSelect}
+          color={isDeleteMode ? 'error' : 'primary'}
+          selectedKeys={selection}
+        >
+          <Table.Header>
+            <Table.Column width={200}>ID</Table.Column>
+            <Table.Column>name</Table.Column>
+            <Table.Column>quantity</Table.Column>
+            <Table.Column>Progress</Table.Column>
+            <Table.Column width={190}>Create at</Table.Column>
+            <Table.Column width={40} align={'end'}></Table.Column>
+          </Table.Header>
+          <Table.Pagination
+            shadow
+            noMargin
+            align="center"
+            rowsPerPage={10}
+            color={isDeleteMode ? 'error' : 'primary'}
+          />
+          <Table.Body>
+            {listCourse
+              .sort((a, b) => {
+                return new Date(b.data.createdAt) - new Date(a.data.createdAt);
+              })
+              .map((item) => {
+                const progress =
+                  (
+                    item.data.data.filter((item) => {
+                      return item.learned;
+                    }).length / item.data.data.length
+                  ).toFixed(2) * 100;
+                return (
+                  <Table.Row key={item.id}>
+                    <Table.Cell>{item.id}</Table.Cell>
+                    <Table.Cell>{item.data.name}</Table.Cell>
+                    <Table.Cell>{item.data.data.length}</Table.Cell>
+                    <Table.Cell>
+                      <Text
+                        p
+                        b
+                        color={
+                          progress >= 90
+                            ? 'success'
+                            : progress > 0
+                            ? 'warning'
+                            : 'error'
+                        }
+                      >
+                        {progress} %
+                      </Text>
+                      <Progress
+                        size={'xs'}
+                        value={progress}
+                        color={
+                          progress >= 90
+                            ? 'success'
+                            : progress > 0
+                            ? 'warning'
+                            : 'error'
+                        }
+                      />
+                    </Table.Cell>
+                    <Table.Cell>
                       {new Date(item.data.createdAt).toLocaleString()}
-                    </strong>
-                  </Text>
-                </Card.Body>
-              </Card>
-            </Grid>
-          ))}
-      </Grid.Container>
+                    </Table.Cell>
+                    <Table.Cell
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'flex-end',
+                      }}
+                    >
+                      {!isDeleteMode && (
+                        <Tooltip content={'View detail'}>
+                          <HiOutlineEye
+                            size={20}
+                            color="#005FCC"
+                            style={{
+                              cursor: 'pointer',
+                            }}
+                            onClick={() => {
+                              navigate(`/course/${item.id}`);
+                            }}
+                          />
+                        </Tooltip>
+                      )}
+                    </Table.Cell>
+                  </Table.Row>
+                );
+              })}
+          </Table.Body>
+        </Table>
+      )}
+      {selection.length > 0 && (
+        <Fragment>
+          <Spacer y={1} />
+          <Button
+            auto
+            color="error"
+            onClick={() => {
+              handleDelete();
+            }}
+            css={{
+              margin: '0 auto',
+            }}
+          >
+            <Text color="#fff">Delete selected</Text>
+          </Button>
+          <Text
+            css={{
+              textAlign: 'center',
+            }}
+            size={12}
+            color="error"
+          >
+            Careful, <b>this action cannot be undone.</b> Gods help you.
+          </Text>
+        </Fragment>
+      )}
     </div>
   );
 };
