@@ -41,6 +41,12 @@ const getRamdom = (id, quantity) => {
     .slice(0, quantity ? quantity : 30);
 };
 
+const getSeconds = (id, quantity) => {
+  const maxNumberQuestion = JSON.parse(localStorage.getItem(id)).data.length
+  
+  return maxNumberQuestion < quantity ? maxNumberQuestion * 45 : quantity * 45;
+}
+
 const Exam = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -53,7 +59,7 @@ const Exam = () => {
   const [enableSubmit, setEnableSubmit] = useState(false);
   const [showWarning, setShowWarning] = useState(true);
   const [countDown, setCountDown] = useState(60);
-  const [time, setTime] = useState(60 * location.state.quantity);
+  const [time, setTime] = useState(getSeconds(id, location.state.quantity));
 
   const [showModal, setShowModal] = useState(false);
 
