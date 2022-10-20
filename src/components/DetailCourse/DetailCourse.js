@@ -26,6 +26,7 @@ import {
   FcExport,
 } from 'react-icons/fc';
 import { FcApproval, FcCancel } from 'react-icons/fc';
+import ReactGA from 'react-ga';
 
 function toLowerCaseNonAccentVietnamese(str) {
   str = str.toLowerCase();
@@ -85,10 +86,14 @@ const DetailCourse = () => {
         setIsConnecting(false);
         setIsFailedConnect(true);
       });
-  }
+  };
 
   useEffect(() => {
     getData();
+    ReactGA.event({
+      category: 'Course',
+      action: `View Detail Course ${JSON.parse(localStorage.getItem(id))?.name}`,
+    });
   }, []);
 
   useEffect(() => {

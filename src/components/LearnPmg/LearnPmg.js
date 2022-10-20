@@ -13,6 +13,7 @@ import { Fragment, useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { MdKeyboardBackspace } from 'react-icons/md';
 import classes from './LearnPmg.module.css';
+import ReactGA from 'react-ga';
 
 const dummyAnswer = ['A', 'B', 'C', 'D'];
 
@@ -107,6 +108,11 @@ const Learn = () => {
     setListLearning(listSeven);
     setCloneListLearning(listSeven);
     setIndexSelectQuestion(0);
+    ReactGA.event({
+      category: 'Learn',
+      action:
+        'Learn question in set ' + JSON.parse(localStorage.getItem(id))?.name,
+    });
   }, []);
 
   // load question and answer to card on indexSelectQuestion change

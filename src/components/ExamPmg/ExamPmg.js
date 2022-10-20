@@ -12,6 +12,7 @@ import {
   Spacer,
 } from '@nextui-org/react';
 import { TiWarning } from 'react-icons/ti';
+import ReactGA from 'react-ga';
 
 const dummyTable = [
   ['Machine', 'DESKTOP-......'],
@@ -88,6 +89,12 @@ const ExamPmg = () => {
       /* IE/Edge */
       elem.msRequestFullscreen();
     }
+
+    ReactGA.event({
+      category: 'Exam',
+      action: 'Take a exam' + JSON.parse(localStorage.getItem(id))?.name,
+    });
+
     return () => {
       if (document.exitFullscreen) {
         document.exitFullscreen();

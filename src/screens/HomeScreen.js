@@ -1,12 +1,14 @@
-import Home from '../components/Home/Home'
+import Home from '../components/Home/Home';
 import { useEffect } from 'react';
+import ReactGA from 'react-ga';
 
-const HomeScreen = ({title}) => {
+const HomeScreen = ({ title }) => {
   useEffect(() => {
     document.title = title;
-  }, [title])
+    ReactGA.event({ category: 'Home', action: 'Home Event' });
+  }, [title]);
 
-  return <Home/>;
-}
+  return <Home />;
+};
 
 export default HomeScreen;

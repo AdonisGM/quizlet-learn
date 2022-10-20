@@ -1,12 +1,14 @@
 import Create from '../components/Create/Create';
 import { useEffect } from 'react';
+import ReactGA from 'react-ga';
 
-const CreateScreen = ({title}) => {
+const CreateScreen = ({ title }) => {
   useEffect(() => {
     document.title = title;
-  }, [title])
+    ReactGA.event({ category: 'Create', action: 'Create course' });
+  }, [title]);
 
-  return <Create/>
-}
+  return <Create />;
+};
 
 export default CreateScreen;

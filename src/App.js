@@ -15,7 +15,6 @@ import { useEffect } from 'react';
 ReactGA.initialize('G-FLXKD35453');
 
 function App() {
-
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
@@ -23,16 +22,40 @@ function App() {
   return (
     <Routes>
       <Route path={'/'} element={<Layout />}>
-        <Route path={'/'} element={<HomeScreen title={'Home | AdonisGM'}/>} />
-        <Route path={'/create'} element={<CreateScreen title={'Create course | AdonisGM'}/>} />
-        <Route path={'/course/:id'} element={<DetailCourseScreen title={'Detail course | AdonisGM'}/>} />
-        <Route path={'/learn/:id'} element={<LearnScreen title={'Learn course | AdonisGM'}/>} />
-        <Route path={'/learn/pmg/:id'} element={<LearnPmgScreen title={'Learn PMG course | AdonisGM'}/>} />
+        <Route path={'/'} element={<HomeScreen title={'Home | AdonisGM'} />} />
+        <Route
+          path={'/create'}
+          element={<CreateScreen title={'Create course | AdonisGM'} />}
+        />
+        <Route
+          path={'/course/:id'}
+          element={<DetailCourseScreen title={'Detail course | AdonisGM'} />}
+        />
+        <Route
+          path={'/learn/:id'}
+          element={<LearnScreen title={'Learn course | AdonisGM'} />}
+        />
+        <Route
+          path={'/learn/pmg/:id'}
+          element={<LearnPmgScreen title={'Learn PMG course | AdonisGM'} />}
+        />
       </Route>
-      <Route path={'/course/:id/exam'} element={<ExamScreen title={'Exam Pmg Screen | AdonisGM'}/>} />
-      <Route path={'/message'} element={<MessageScreen title={'Message | AdonisGM'}/>} />
-      <Route path={'/course/pmg/:id/exam'} element={<ExamScreenPmg title={'Exam Pmg Screen | AdonisGM'}/>} />
-      <Route path={'*'} element={<NotFoundScreen title={'Not found | AdonisGM'}/>} />
+      <Route
+        path={'/course/:id/exam'}
+        element={<ExamScreen title={'Exam Pmg Screen | AdonisGM'} />}
+      />
+      <Route
+        path={'/message'}
+        element={<MessageScreen title={'Message | AdonisGM'} />}
+      />
+      <Route
+        path={'/course/pmg/:id/exam'}
+        element={<ExamScreenPmg title={'Exam Pmg Screen | AdonisGM'} />}
+      />
+      <Route
+        path={'*'}
+        element={<NotFoundScreen title={'Not found | AdonisGM'} />}
+      />
     </Routes>
   );
 }
