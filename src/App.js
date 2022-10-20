@@ -10,7 +10,16 @@ import LearnPmgScreen from './screens/LearnPmgScreen';
 import ExamScreenPmg from './screens/ExamPmgScreen';
 import MessageScreen from './screens/MessageScreen';
 
+import ReactGA from 'react-ga';
+import { useEffect } from 'react';
+ReactGA.initialize('G-FLXKD35453');
+
 function App() {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+
   return (
     <Routes>
       <Route path={'/'} element={<Layout />}>
