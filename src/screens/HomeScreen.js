@@ -1,6 +1,6 @@
 import Home from '../components/Home/Home';
 import { useEffect } from 'react';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 const HomeScreen = ({ title }) => {
   useEffect(() => {

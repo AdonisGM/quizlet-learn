@@ -13,7 +13,7 @@ import { Fragment, useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { MdKeyboardBackspace } from 'react-icons/md';
 import classes from './LearnPmg.module.css';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 const dummyAnswer = ['A', 'B', 'C', 'D'];
 

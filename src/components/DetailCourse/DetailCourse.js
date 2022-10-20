@@ -26,7 +26,7 @@ import {
   FcExport,
 } from 'react-icons/fc';
 import { FcApproval, FcCancel } from 'react-icons/fc';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 function toLowerCaseNonAccentVietnamese(str) {
   str = str.toLowerCase();

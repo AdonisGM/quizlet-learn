@@ -12,7 +12,7 @@ import {
   Spacer,
 } from '@nextui-org/react';
 import { TiWarning } from 'react-icons/ti';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 const dummyTable = [
   ['Machine', 'DESKTOP-......'],
