@@ -17,6 +17,7 @@ import classes from './Home.module.css';
 import { nanoid } from 'nanoid';
 import CrawlData from '../CrawlData/CrawlData';
 import {
+  FcCollect,
   FcDeleteDatabase,
   FcDownload,
   FcFile,
@@ -188,6 +189,9 @@ const Home = () => {
                   case 'crawl':
                     setShowModalCrawl(true);
                     break;
+                  case 'merge':
+                    navigate('/merge');
+                    break;
                   case 'delete':
                     setIsDeleteMode(!isDeleteMode);
                     setSelection([]);
@@ -222,6 +226,14 @@ const Home = () => {
                   icon={<FcDownload />}
                 >
                   Import code
+                </Dropdown.Item>
+                <Dropdown.Item
+                  key="merge"
+                  description="Merge course for easy learning"
+                  color="success"
+                  icon={<FcCollect />}
+                >
+                  Merge course
                 </Dropdown.Item>
               </Dropdown.Section>
               <Dropdown.Section title="Danger">
@@ -279,12 +291,13 @@ const Home = () => {
                 return new Date(b.data.createdAt) - new Date(a.data.createdAt);
               })
               .map((item) => {
-                const progress =
-                  (
-                    item.data.data.filter((item) => {
-                      return item.learned;
-                    }).length * 100 / item.data.data.length
-                  ).toFixed(2);
+                const progress = (
+                  (item.data.data.filter((item) => {
+                    return item.learned;
+                  }).length *
+                    100) /
+                  item.data.data.length
+                ).toFixed(2);
                 return (
                   <Table.Row key={item.id}>
                     <Table.Cell>{item.id}</Table.Cell>

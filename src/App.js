@@ -12,6 +12,7 @@ import MessageScreen from './screens/MessageScreen';
 
 import ReactGA from 'react-ga4';
 import { useEffect } from 'react';
+import MergeScreen from './screens/MergeScreen';
 ReactGA.initialize('G-FLXKD35453');
 
 function App() {
@@ -39,6 +40,10 @@ function App() {
         <Route
           path={'/learn/pmg/:id'}
           element={<LearnPmgScreen title={'Learn PMG course | AdonisGM'} />}
+        />
+        <Route
+          path={'/merge'}
+          element={<MergeScreen title={'Merge course | AdonisGM'} />}
         />
       </Route>
       <Route

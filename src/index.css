@@ -3,9 +3,9 @@ body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif !important;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing : antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f6f7fb;
+  background-color       : #f6f7fb;
 }
 
 code {
@@ -14,3 +14,28 @@ code {
 }
 
 @import '~antd/dist/antd.css';
+
+.ant-input {
+  border-radius   : 10px !important;
+  padding         : 10px !important;
+  background-color: rgb(244, 245, 247) !important;
+  border          : none !important;
+}
+
+.ant-select .ant-select-selector {
+  padding-top   : 4px !important;
+  padding-bottom: 4px !important;
+  height        : 40px !important;
+
+  border-radius   : 0.75rem !important;
+  background-color: #f1f3f5 !important;
+  color           : #11181c !important;
+  border          : none !important;
+}
+
+.ant-select-focused .ant-select-selector,
+.ant-select-selector:focus,
+.ant-select-selector:active,
+.ant-select-open .ant-select-selector {
+  box-shadow: none !important;
+}
