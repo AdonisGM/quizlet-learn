@@ -94,6 +94,8 @@ const Learn = () => {
   const [numberLearning, setNumberLearning] = useState(0);
   const [listChoise, setListChoise] = useState([]);
   const [isAnswerChoise, setIsAnswerChoise] = useState(false);
+  
+  const [totalAnswer, setTotalAnswer] = useState(0);
 
   // get 7 question random from list in first time
   useEffect(() => {
@@ -105,6 +107,9 @@ const Learn = () => {
     if (listSeven.length === 0) {
       navigate('/course/' + id);
     }
+    setTotalAnswer(
+      listAllQuestion.filter((item) => item.learned === true).length
+    );
     setListLearning(listSeven);
     setCloneListLearning(listSeven);
     setIndexSelectQuestion(0);
@@ -181,6 +186,11 @@ const Learn = () => {
     temp.data = listAllQuestion;
     localStorage.setItem(id, JSON.stringify(temp));
     setShowResult(true);
+    setTotalAnswer(
+      JSON.parse(localStorage.getItem(id)).data.filter(
+        (item) => item.learned === true
+      ).length
+    );
   };
 
   const handleCardAnswerPress = (key) => {
@@ -290,8 +300,51 @@ const Learn = () => {
     }
   };
 
+  const progress = ((totalAnswer / listAllQuestion.length) * 100).toFixed(2);
+
   return (
     <div className={classes.main}>
+      <div className={classes.progress}>
+        <Card>
+          <Card.Body>
+            <Text
+              p
+              b
+              size={12}
+              css={{
+                width: '100%',
+                textAlign: 'center',
+              }}
+            >
+              Analyzing your progress
+            </Text>
+            <Spacer y={1} />
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+              }}
+            >
+              <Text p b size={12}>
+                Total: {totalAnswer}/{listAllQuestion.length}
+              </Text>
+              <Text p b size={12}>
+                {progress} %
+              </Text>
+            </div>
+            <Progress
+              squared="true"
+              size="xs"
+              value={progress}
+              shadow
+              color={
+                progress >= 90 ? 'success' : progress > 0 ? 'warning' : 'error'
+              }
+              status="primary"
+            />
+          </Card.Body>
+        </Card>
+      </div>
       <Progress
         css={{
           position: 'fixed',

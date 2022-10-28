@@ -49,3 +49,15 @@
   padding    : 4px 20px;
   column-gap : 20px;
 }
+
+.progress {
+  position: fixed;
+  top     : 20px;
+  right   : 20px;
+
+  width : 250px;
+
+  z-index: 999999999999;
+
+  transition: all 0.5s ease-in-out;
+}

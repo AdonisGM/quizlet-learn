@@ -27,38 +27,6 @@ const styleCardIncorrect = {
   backgroundColor: '#fbf2f2',
 };
 
-// const extractQuestion = (text) => {
-//   const result = text
-//     .split('\n')
-//     .filter((item) => {
-//       return !item.match(/^[AaBbCcDdEeFf]{1}[ ]{0,}[\.]{0,1}/g);
-//     })
-//     .join('\n');
-//   return result;
-// };
-
-// const extractAnswer = (text) => {
-//   const result = text
-//     .split('\n')
-//     .filter((item) => {
-//       return item.slice(0, 5).match(/^[AaBbCcDdEeFf]{1}[ ]{0,}[\.]{0,1}/g);
-//     })
-//     .map((item) => {
-//       let a;
-//       if (item.slice(0, 5).match(/[Aa]{1}[ ]{0,}[\.]{0,1}/g)) a = 'A';
-//       if (item.slice(0, 5).match(/[Bb]{1}[ ]{0,}[\.]{0,1}/g)) a = 'B';
-//       if (item.slice(0, 5).match(/[Cc]{1}[ ]{0,}[\.]{0,1}/g)) a = 'C';
-//       if (item.slice(0, 5).match(/[Dd]{1}[ ]{0,}[\.]{0,1}/g)) a = 'D';
-//       if (item.slice(0, 5).match(/[Ee]{1}[ ]{0,}[\.]{0,1}/g)) a = 'E';
-//       if (item.slice(0, 5).match(/[Ff]{1}[ ]{0,}[\.]{0,1}/g)) a = 'F';
-//       return {
-//         key: a,
-//         value: item.replace(/^[AaBbCcDdEeFf]{1}[ ]{0,}[\.]{0,1}/g, '').trim(),
-//       };
-//     });
-//   return result;
-// };
-
 const getSevenFromList = (list) => {
   const length = list.length < 7 ? list.length : 7;
   const result = [];
@@ -88,6 +56,7 @@ const Learn = () => {
   const [isNotCorrect, setIsNotCorrect] = useState(false);
   const [showResult, setShowResult] = useState(false);
   const [numberLearning, setNumberLearning] = useState(0);
+  const [totalAnswer, setTotalAnswer] = useState(0);
 
   // get 7 question random from list in first time
   useEffect(() => {
@@ -99,6 +68,9 @@ const Learn = () => {
     if (listSeven.length === 0) {
       navigate('/course/' + id);
     }
+    setTotalAnswer(
+      listAllQuestion.filter((item) => item.learned === true).length
+    );
     setListLearning(listSeven);
     setCloneListLearning(listSeven);
     setIndexSelectQuestion(0);
@@ -173,6 +145,11 @@ const Learn = () => {
     temp.data = listAllQuestion;
     localStorage.setItem(id, JSON.stringify(temp));
     setShowResult(true);
+    setTotalAnswer(
+      JSON.parse(localStorage.getItem(id)).data.filter(
+        (item) => item.learned === true
+      ).length
+    );
   };
 
   const handleCardAnswerPress = (key) => {
@@ -238,8 +215,51 @@ const Learn = () => {
     setIndexSelectQuestion(0);
   };
 
+  const progress = ((totalAnswer / listAllQuestion.length) * 100).toFixed(2);
+
   return (
     <div className={classes.main}>
+      <div className={classes.progress}>
+        <Card>
+          <Card.Body>
+            <Text
+              p
+              b
+              size={12}
+              css={{
+                width: '100%',
+                textAlign: 'center',
+              }}
+            >
+              Analyzing your progress
+            </Text>
+            <Spacer y={1} />
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+              }}
+            >
+              <Text p b size={12}>
+                Total: {totalAnswer}/{listAllQuestion.length}
+              </Text>
+              <Text p b size={12}>
+                {progress} %
+              </Text>
+            </div>
+            <Progress
+              squared="true"
+              size="xs"
+              value={progress}
+              shadow
+              color={
+                progress >= 90 ? 'success' : progress > 0 ? 'warning' : 'error'
+              }
+              status="primary"
+            />
+          </Card.Body>
+        </Card>
+      </div>
       <Progress
         css={{
           position: 'fixed',
