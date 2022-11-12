@@ -60,6 +60,8 @@ webpack compiled successfully
 
 Name: AdonisGM
 
-## Contribute
+## Contributer
 
-Any contribution is welcome. You can send a new issue, i will check it.
+Thanks to my best friends for accompanying and contributing more ideas to this project:
+- Nguyen Thuy Duong
+- Dang Vu Hoang Trung
