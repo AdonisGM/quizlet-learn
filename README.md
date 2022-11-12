@@ -63,5 +63,7 @@ Name: AdonisGM
 ## Contributer
 
 Thanks to my best friends for accompanying and contributing more ideas to this project:
-- Nguyen Thuy Duong
-- Dang Vu Hoang Trung
+- [Nguyễn Thuỳ Dương](https://www.facebook.com/100005918854671/)
+- [Đặng Vũ Hoàng Trung](https://www.facebook.com/100004263677832/)
+- [Nguyễn Công Anh](https://www.facebook.com/100007253622745/)
+- [Ngô Tuấn Anh](https://www.facebook.com/100010114023749/)
