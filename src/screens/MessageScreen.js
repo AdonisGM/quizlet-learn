@@ -5,20 +5,36 @@ import { BsHeartFill } from 'react-icons/bs';
 const MessageScreen = () => {
   return (
     <div className={classes.main}>
-      <BsHeartFill color="red" size={40} />
-      <Spacer y={0.6} />
+      <div style={{
+        height: '60px',
+      }} className={classes.heart}>
+        <BsHeartFill color="red" />
+      </div>
+      <Spacer y={1.6} />
       <Text p>
-        Thank you for being a part of my mind, being a part of the motivation to
-        get me where I am today.
+        Trang web đã <b>DỪNG HOẠT ĐỘNG</b>. Bạn sẽ không thể truy cập vào trang
+        web này được nữa.
       </Text>
-      <Text p>Wishing you the best of luck in your future life.</Text>
       <Text p>
-        Love you so much, <strong>4264!</strong>
+        Trang web xây dựng với hai mục đích chính, hiện tại mục đích đầu tiên đã
+        được hoàn thành nhưng mục đích thứ hai đã không còn 😥.
       </Text>
-      <Spacer y={0.6} />
+      <Text p>Vì vậy, mình sẽ dừng hoạt động của trang web này.</Text>
+      <Spacer y={1.6} />
+      <Text p>Cảm ơn bạn đã sử dụng trong thời gian qua.</Text>
+      <Text p>Chúc bạn một ngày tốt lành.</Text>
+      <Spacer y={1} />
       <Text p>
         From: <strong>AdonisGM</strong>
       </Text>
+      <Spacer y={4} />
+      <Text p i>
+        Source code của trang web này đã được mình đưa lên Github. Nếu bạn muốn
+        tham khảo thì có thể vào đây:
+      </Text>
+      <a href="https://github.com/AdonisGM/quizlet-learn">
+        https://github.com/AdonisGM/quizlet-learn
+      </a>
     </div>
   );
 };

@@ -13,6 +13,7 @@ import MessageScreen from './screens/MessageScreen';
 import ReactGA from 'react-ga4';
 import { useEffect } from 'react';
 import MergeScreen from './screens/MergeScreen';
+import Shutdown from './screens/Shutdown';
 ReactGA.initialize('G-FLXKD35453');
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path={'/'} element={<Layout />}>
+      {/* <Route path={'/'} element={<Layout />}>
         <Route path={'/'} element={<HomeScreen title={'Home | AdonisGM'} />} />
         <Route
           path={'/create'}
@@ -61,6 +62,10 @@ function App() {
       <Route
         path={'*'}
         element={<NotFoundScreen title={'Not found | AdonisGM'} />}
+      /> */}
+      <Route
+        path={'*'}
+        element={<MessageScreen title={'Shutdown | AdonisGM'} />}
       />
     </Routes>
   );
